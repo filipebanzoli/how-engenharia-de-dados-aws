@@ -1,7 +1,13 @@
 # Engenharia de Dados na AWS
 Repositório para compartilhamento de código e conhecimento de engenharia de dados na AWS. Aqui serão compartilhados os exercícios das aulas, e também é o repositório aonde será desenvolvido o projeto prático.
 
+# Encontros
+O material dos encontros ficará disponível no diretório [/encontros](/encontros/). Lembrando que a ideia é a primeira parte da aula fazermos exercícios, e a segunda parte da aula fazermos o projeto.
+
+
 # Projeto
+O projeto se encontra dentro do diretório [/projeto](/projeto).
+
 A arquitetura proposta de projeto para a turma de agosto/2023 é a seguinte:
 
 ![Arquitetura do projeto de dados, contendo fontes de dados, e ferramentas de intestão, transformação, armazenamento e visualização de dados.](Projeto.png)
