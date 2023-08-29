@@ -15,6 +15,12 @@ A arquitetura proposta de projeto para a turma de agosto/2023 é a seguinte:
 
 Para o primeiro encontro, **fundamentos de python**, vamos trabalhar na extração de dados da web utilizando um script python no serviço [AWS Lambda](https://aws.amazon.com/lambda/).
 
+Com relação a qual parte do projeto será desenvolvida em qual encontro, segue abaixo um GIF explicativo:
+
+![GIF Explicativo de qual parte do projeto será feita em qual encontro](/Projeto-Encontros.gif)
+
+_Gif criada utilizando a plataforma online [ezgif](https://ezgif.com/maker). Delay Time 2.5s._
+
 # Links Úteis
 - [Memberkit (Plataforma Aprendizado How)](https://how-bootcamps.memberkit.com.br/)
 
