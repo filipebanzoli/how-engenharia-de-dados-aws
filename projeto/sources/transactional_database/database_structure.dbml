@@ -1,0 +1,73 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table order {
+  id serial [primary key]
+  created_at timestamp [default: `now()`]
+  updated_at timestamp
+  client_id integer
+  status varchar
+}
+
+Table order_status_history {
+  id serial [primary key]
+  created_at timestamp [default: `now()`]
+  updated_at timestamp
+  order_id integer
+  order_status integer
+}
+
+Table order_products {
+  id serial [primary key]
+  created_at timestamp [default: `now()`]
+  updated_at timestamp
+  order_id integer
+  product_id integer
+  amount float
+}
+
+Table product {
+  id serial [primary key]
+  created_at timestamp [default: `now()`]
+  updated_at timestamp
+  name varchar
+  description varchar
+  amount float
+}
+
+Table client {
+  id serial [primary key]
+  created_at timestamp [default: `now()`]
+  updated_at timestamp
+  name varchar
+  address_id integer
+}
+
+Table address {
+  id serial [primary key]
+  created_at timestamp [default: `now()`]
+  updated_at timestamp
+  street varchar
+  number varchar
+  complement varchar
+  postal_code varchar
+  city varchar
+  state varchar
+}
+
+Table supplier {
+  id serial [primary key]
+  created_at timestamp [default: `now()`]
+  updated_at timestamp
+  name varchar
+  address_id integer
+}
+
+Ref: client.id < order.client_id
+Ref: order.id < order_status_history.order_id
+Ref: product.id < order_products.product_id
+Ref: order.id < order_products.order_id
+Ref: client.address_id - address.id
+Ref: supplier.address_id - address.id
+
+
