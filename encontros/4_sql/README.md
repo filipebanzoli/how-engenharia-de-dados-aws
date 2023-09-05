@@ -9,6 +9,11 @@ O planejamento do encontro de hoje é criar e alimentar um banco de dados RDS Po
 - AWS CloudWatch Events
 - AWS CloudWatch Logs
 
+
+## Reforço de SQL
+
+Caso tenha interesse em fazer um reforço de SQL, [recomendo fazer esse tutorial aqui](https://www.w3schools.com/sql/default.asp).
+
 ## Criando um banco de dados RDS Postgres
 
 Segue abaixo um comando do AWS Cli para criar um banco de dados RDS Postgres. [Definição do Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html). Existe um free tier para o uso do AWS RDS, [confira aqui mais detalhes](https://aws.amazon.com/rds/free/).
