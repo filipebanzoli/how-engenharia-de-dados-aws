@@ -14,6 +14,12 @@ O planejamento do encontro de hoje é criar e alimentar um banco de dados RDS Po
 
 Caso tenha interesse em fazer um reforço de SQL, [recomendo fazer esse tutorial aqui](https://www.w3schools.com/sql/default.asp).
 
+## Projeto Etapas:
+
+1. Subir banco de Dados RDS
+2. Executar script `main.py` em [prepare_database](../../projeto/sources/transactional_database/prepare_database), para criar o usuário e primeiras tabelas. Se quiser, criar tabelas adicionais [descritas aqui](../../projeto/sources/transactional_database/database_structure.dbml) e [aqui](../../projeto/sources/transactional_database/database_structure.png)
+3. Executar scripts em [insert_fake_data](../../projeto/sources/transactional_database/insert_fake_data), e depois disso buildar o container e subir como uma função AWS Lambda na AWS.
+
 ## Criando um banco de dados RDS Postgres
 
 Segue abaixo um comando do AWS Cli para criar um banco de dados RDS Postgres. [Definição do Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html). Existe um free tier para o uso do AWS RDS, [confira aqui mais detalhes](https://aws.amazon.com/rds/free/).
