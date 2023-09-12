@@ -30,4 +30,12 @@ Para destruir os recursos:
 
 `terraform destroy`
 
+## O que precisa já estar no projeto:
 
+### O que é obrigatório:
+- Incluir fonte de dados do condor usando AWS Lambda.
+
+### O que é opcional:
+- Incluir fonte de dados de mercado livre, usando Selenium
+
+### Sinta-se na liberdade de expandir o seu projeto também!

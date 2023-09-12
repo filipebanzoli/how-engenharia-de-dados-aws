@@ -8,5 +8,5 @@
 
 - [Tutoriais oficiais do Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started)
 - [Terraform registry](https://registry.terraform.io/) com os providers e módulos do Terraform oficiais e da comunidade. 
-- 
+  
 ## Projeto!
