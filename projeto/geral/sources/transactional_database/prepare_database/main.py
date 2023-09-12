@@ -32,7 +32,6 @@ def retrive_secret_from_secret_manager(key:str, session=boto3.session.Session())
 
 def main():
 
-    logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
     load_dotenv()
     environment = jinja2.Environment()
     postgres_root_user_kms_key = os.environ['postgres_root_user_kms_key']
