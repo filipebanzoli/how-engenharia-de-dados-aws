@@ -51,8 +51,7 @@ aws rds create-db-instance \
     --backup-retention-period 0 \
     --storage-type gp2 \
     --publicly-accessible \
-    --vpc-security-group-ids YOUR_GROUP_ID \
-    --region us-east-1
+    --vpc-security-group-ids YOUR_GROUP_ID
 ```
 
 Segue aqui um exemplo do [retorno JSON](./create_rds.json) do comando SQL de criação do banco de dados Postgres.

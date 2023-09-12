@@ -6,7 +6,6 @@ import os
 import logging
 from sqlalchemy import create_engine,  text
 import boto3
-from botocore.exceptions import NoCredentialsError
 import json
 import urllib.parse
 from faker import Faker
@@ -63,7 +62,7 @@ def read_query(path:Path):
 
 def main():
 
-    logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
+    logging.info('Loading Env')
     load_dotenv()
     environment = jinja2.Environment()
 
@@ -73,6 +72,8 @@ def main():
     postgres_host = os.environ['postgres_host']
     postgres_database = os.environ['postgres_database']
     postgres_port = os.environ['postgres_port']
+
+    logging.info('Retriving AWS Secret from Secret Manager')
 
     postgres_app_username = retrive_secret_from_secret_manager(postgres_app_user_kms_key)['username']
     postgres_app_password = urllib.parse.quote_plus(retrive_secret_from_secret_manager(postgres_app_user_kms_key)['password'])
@@ -89,7 +90,7 @@ def main():
     logging.info('Getting query to insert in database')
     raw_query = read_query(Path('./partial_sql_insert.sql'))
     
-    for i in range(200):
+    for i in range(30):
         logging.info(f'Preparing to insert {i} row')
         logging.info('Applying jinja formatting in query')
         template = environment.from_string(raw_query)
@@ -120,18 +121,7 @@ def main():
 
 if __name__ == "__main__":
 
+    logging.getLogger().setLevel(logging.INFO)
+    logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
     main()
     
-
-
-
-
-
-
-
-
-
-
-
-
-

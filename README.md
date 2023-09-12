@@ -8,6 +8,8 @@ O material dos encontros ficará disponível no diretório [/encontros](/encontr
 # Projeto
 O projeto se encontra dentro do diretório [/projeto](/projeto).
 
+Para mais informações sobre o projeto, [leia o arquivo README.md](./projeto/README.md) do diretório de projeto.
+
 A arquitetura proposta de projeto para a turma de agosto/2023 é a seguinte:
 
 ![Arquitetura do projeto de dados, contendo fontes de dados, e ferramentas de intestão, transformação, armazenamento e visualização de dados.](Projeto.png)
