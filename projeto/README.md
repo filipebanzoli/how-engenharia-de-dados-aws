@@ -15,6 +15,14 @@ Até o momento as tecnologias utilizadas no projeto são:
 [AWS Cli](https://aws.amazon.com/cli/) (deixe configurado com uma permissão padrão que consiga provisionar os recursos).
 [PSQL](https://www.postgresql.org/docs/current/app-psql.html) (para criação de recursos no banco de dados postgres).
 [Docker](https://www.docker.com/products/docker-desktop/) (para criação de containers docker)
+[Google Service Account](https://cloud.google.com/iam/docs/service-accounts-create) (para criar uma Service Account usada para se conectar a uma planilha do Google Sheets via API)
+
+### Google Service Account Tutorial
+
+1. Primeiramente, [habilite a IAM API e crie uma Service Role](https://cloud.google.com/iam/docs/service-accounts-create)
+2. [Na tela de services accounts](https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts), selecione o projeto e a service account criada.
+3. Agora clique na aba Chaves, agregar nova Chave e seleciona JSON
+4. Pronto, agora você já criou uma Service Account e baixou o chave no formato JSON.
 
 Após instalado e configurado essas tecnologias, para provisionar a infraestrutura basta executar os comandos tradicionais do terraform para planejar, criar e no final dos seus estudos diários, destruir a arquitetura. No diretório [geral](./geral/), executar:
 
@@ -30,10 +38,12 @@ Para destruir os recursos:
 
 `terraform destroy`
 
+
 ## O que precisa já estar no projeto:
 
 ### O que é obrigatório:
 - Incluir fonte de dados do condor usando AWS Lambda.
+- Incluir fonte de dados de planilha usando Airbyte Cloud, Google Sheets, AWS. ([source worksheet](./geral/sources/worksheet/))
 
 ### O que é opcional:
 - Incluir fonte de dados de mercado livre, usando Selenium
