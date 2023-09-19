@@ -18,32 +18,29 @@ def read_query(path:Path):
 
     return result
 
-def retrive_secret_from_secret_manager(key:str, session=boto3.session.Session()):
+# def retrive_secret_from_secret_manager(key:str, session=boto3.session.Session()):
 
-    # Initialize the Secrets Manager client
-    client = session.client(service_name='secretsmanager')
+#     # Initialize the Secrets Manager client
+#     client = session.client(service_name='secretsmanager')
 
-    # Retrieve the secret value
-    response = client.get_secret_value(SecretId=key)
-    secret_value = response['SecretString']
-    secret_value = json.loads(secret_value)
-    return secret_value
+#     # Retrieve the secret value
+#     response = client.get_secret_value(SecretId=key)
+#     secret_value = response['SecretString']
+#     secret_value = json.loads(secret_value)
+#     return secret_value
 
 
 def main():
 
     load_dotenv()
     environment = jinja2.Environment()
-    postgres_root_user_kms_key = os.environ['postgres_root_user_kms_key']
-    postgres_app_user_kms_key = os.environ['postgres_app_user_kms_key']
+    postgres_root_username = os.environ['postgres_root_user']
+    postgres_root_password = os.environ['postgres_root_password']
+    postgres_app_username = os.environ['postgres_app_user']
+    postgres_app_password = os.environ['postgres_app_password']
     postgres_host = os.environ['postgres_host']
     postgres_database = os.environ['postgres_database']
     postgres_port = os.environ['postgres_port']
-
-    postgres_root_username = retrive_secret_from_secret_manager(postgres_root_user_kms_key)['username']
-    postgres_root_password = urllib.parse.quote_plus(retrive_secret_from_secret_manager(postgres_root_user_kms_key)['password'])
-    postgres_app_username = retrive_secret_from_secret_manager(postgres_app_user_kms_key)['username']
-    postgres_app_password = urllib.parse.quote_plus(retrive_secret_from_secret_manager(postgres_app_user_kms_key)['password'])
 
     logging.info('Getting query to create first elements in database')
     query = read_query(Path('./create_first_elements.sql'))
