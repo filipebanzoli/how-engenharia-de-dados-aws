@@ -1,0 +1,8 @@
+backoff==2.2.1
+certifi==2023.7.22
+charset-normalizer==3.2.0
+idna==3.4
+ratelimit==2.2.1
+requests==2.31.0
+schedule==1.2.0
+urllib3==2.0.4
