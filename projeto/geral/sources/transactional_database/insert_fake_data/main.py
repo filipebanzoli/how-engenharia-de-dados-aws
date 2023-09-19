@@ -10,6 +10,7 @@ import json
 import urllib.parse
 from faker import Faker
 import random
+import os
 
 
 STATUSES = ['ORDER_ISSUED', 'SEPARATING_IN_STOCK', 'DELIVERING', 'DELIVERED']
@@ -42,16 +43,18 @@ STATES = ['AC',
           'SP',
           'TO']
 
-def retrive_secret_from_secret_manager(key:str, session=boto3.session.Session()):
+# def retrive_secret_from_secret_manager(key:str, session=boto3.session.Session()):
 
-    # Initialize the Secrets Manager client
-    client = session.client(service_name='secretsmanager')
 
-    # Retrieve the secret value
-    response = client.get_secret_value(SecretId=key)
-    secret_value = response['SecretString']
-    secret_value = json.loads(secret_value)
-    return secret_value
+#     print(os.environ)
+#     # Initialize the Secrets Manager client
+#     client = session.client(service_name='secretsmanager')
+
+#     # Retrieve the secret value
+#     response = client.get_secret_value(SecretId=key)
+#     secret_value = response['SecretString']
+#     secret_value = json.loads(secret_value)
+#     return secret_value
 
 def read_query(path:Path):
 
@@ -68,15 +71,11 @@ def main():
 
     fake = Faker('pt-BR')
 
-    postgres_app_user_kms_key = os.environ['postgres_app_user_kms_key']
+    postgres_app_username = os.environ['postgres_app_username']
+    postgres_app_password = os.environ['postgres_app_password']
     postgres_host = os.environ['postgres_host']
     postgres_database = os.environ['postgres_database']
     postgres_port = os.environ['postgres_port']
-
-    logging.info('Retriving AWS Secret from Secret Manager')
-
-    postgres_app_username = retrive_secret_from_secret_manager(postgres_app_user_kms_key)['username']
-    postgres_app_password = urllib.parse.quote_plus(retrive_secret_from_secret_manager(postgres_app_user_kms_key)['password'])
 
     logging.info('Connecting to database')
 
@@ -90,7 +89,7 @@ def main():
     logging.info('Getting query to insert in database')
     raw_query = read_query(Path('./partial_sql_insert.sql'))
     
-    for i in range(30):
+    for i in range(200):
         logging.info(f'Preparing to insert {i} row')
         logging.info('Applying jinja formatting in query')
         template = environment.from_string(raw_query)
