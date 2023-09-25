@@ -12,7 +12,7 @@ Nessa etapa estaremos:
 - criando um usuário sistêmico para o Airbyte com permissão para inserir dados no S3
 - criando uma service account do Google para trazer dados da planilha
 - criando uma conta no [Airbyte Cloud](https://airbyte.com/)
-- configurando uma integração de dados entre o Google Sheets e o Data Lake em S3.
+- configurando uma integração de dados entre o Google Sheets e o Data Lake em S3 via Airbyte.
 
 ## Lembrem de deixar organizado os arquivos da sua equipe [dentro da pasta da sua equipe](../../../) e não no geral.
 

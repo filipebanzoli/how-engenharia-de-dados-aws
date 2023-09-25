@@ -2,6 +2,7 @@ import datetime
 from abc import ABC, abstractmethod
 from typing import List
 
+import time
 from mercado_bitcoin.apis import DaySummaryApi
 
 
