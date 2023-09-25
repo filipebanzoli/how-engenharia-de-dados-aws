@@ -11,10 +11,10 @@
 # In this example, @doctocat owns any files in the build/logs
 # directory at the root of the repository and any of its
 # subdirectories.
-/projeto/equipe_a/* @flavia-lima @mau-me @filipebanzoli
-/projeto/equipe_b/* @filipebanzoli
-/projeto/equipe_c/* @nat-rib @mateusvarelo @filipebanzoli
-/projeto/equipe_d/* @ffgama @filipebanzoli
+/projeto/equipe_a/ @flavia-lima @mau-me @filipebanzoli
+/projeto/equipe_b/ @filipebanzoli
+/projeto/equipe_c/ @nat-rib @mateusvarelo @filipebanzoli
+/projeto/equipe_d/ @ffgama @filipebanzoli
 
 
 
