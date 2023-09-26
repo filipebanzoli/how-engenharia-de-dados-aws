@@ -22,7 +22,6 @@ resource "aws_s3_bucket" "datalake" {
   bucket = "prd-datalake-team-c"
 
   tags = {
-    Name        = "Team C"
     Environment = "Dev"
   }
 }
