@@ -47,5 +47,6 @@ Para destruir os recursos:
 
 ### O que é opcional:
 - Incluir fonte de dados de mercado livre, usando Selenium
+- Incluir teste de integração em pelo menos uma das pipelines em Python desenvolvidas.
 
 ### Sinta-se na liberdade de expandir o seu projeto também!
