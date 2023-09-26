@@ -1,4 +1,5 @@
 terraform {
+  required_version = ">= 1.0"
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -40,4 +41,3 @@ module "transactional_database" {
 module "worksheet" {
   source = "./sources/worksheet"
 }
-

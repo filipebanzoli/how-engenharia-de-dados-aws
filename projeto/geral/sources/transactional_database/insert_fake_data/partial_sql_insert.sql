@@ -14,13 +14,13 @@ FROM x;
 
 
 WITH x AS (
-   INSERT INTO transactional.address ("updated_at", 
-                                      "street", 
-                                      "number", 
-                                      "postcode", 
-                                      "city", 
+   INSERT INTO transactional.address ("updated_at",
+                                      "street",
+                                      "number",
+                                      "postcode",
+                                      "city",
                                       "state") VALUES (
-                                        now(), 
+                                        now(),
                                         '{{ address_street }}',
                                         '{{ address_number }}',
                                         '{{ address_postcode }}',
@@ -30,9 +30,7 @@ WITH x AS (
 )
 
 INSERT INTO transactional.supplier ("updated_at", "name", "address_id")
-SELECT now(), '{{ supplier_name }}', id 
+SELECT now(), '{{ supplier_name }}', id
 FROM x;
 
 COMMIT;
-
-

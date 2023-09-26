@@ -30,4 +30,3 @@ _Gif criada utilizando a plataforma online [ezgif](https://ezgif.com/maker). Del
 # Referências de Aprendizado
 - [Fundamentals of Data Engineering (by Joe Reis, Matt Housley)](https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/): Literatura base recomendada em engenharia de dados.
 - [AWS Analytics Lens (FREE!)](https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/analytics-lens.html): Coleção de boas práticas da AWS para construção de arquiteturas analíticas.
-  

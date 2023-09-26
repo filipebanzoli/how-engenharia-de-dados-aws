@@ -1,9 +1,26 @@
 
 terraform {
+  required_version = ">= 1.0"
   required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
     docker = {
       source  = "kreuzwerker/docker"
       version = "3.0.2"
+    }
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.0.0"
+    }
+    http = {
+      source  = "hashicorp/http"
+      version = "~> 3.0.0"
+    }
+    null = {
+      source  = "hashicorp/null"
+      version = "3.2.1"
     }
   }
 }
@@ -33,19 +50,19 @@ resource "aws_security_group" "transactional_database_sg" {
   description = "Allow access by my Public IP Address and AWS Lambda"
 }
 
-resource "aws_vpc_security_group_ingress_rule" "my_public_ip"  {
+resource "aws_vpc_security_group_ingress_rule" "my_public_ip" {
   security_group_id = aws_security_group.transactional_database_sg.id
-  description = "Access Postgres from my public IP"
-  from_port   = 5432
-  to_port     = 5432
-  ip_protocol    = "tcp"
-  cidr_ipv4 = "${local.my_public_ip}/32"
+  description       = "Access Postgres from my public IP"
+  from_port         = 5432
+  to_port           = 5432
+  ip_protocol       = "tcp"
+  cidr_ipv4         = "${local.my_public_ip}/32"
 }
 
 resource "aws_vpc_security_group_ingress_rule" "lambda_insert_fake_data" {
-  security_group_id = aws_security_group.transactional_database_sg.id
-  description = "Access Postgres from Lambda Insert Fake Data"
-  ip_protocol = "-1"
+  security_group_id            = aws_security_group.transactional_database_sg.id
+  description                  = "Access Postgres from Lambda Insert Fake Data"
+  ip_protocol                  = "-1"
   referenced_security_group_id = aws_security_group.insert_fake_data_sg.id
 }
 
@@ -62,6 +79,9 @@ resource "random_password" "postgres_transactional_fake_data_password" {
 }
 
 resource "aws_db_instance" "transactional" {
+  #tfsec:aws-rds-encrypt-instance-storage-data
+  # Não estamos criptografando storage por questões de custo
+  # mas em produção isso deveria ser feito.
   allocated_storage       = 20
   db_name                 = local.transactional_database
   identifier              = "transactional"
@@ -72,9 +92,11 @@ resource "aws_db_instance" "transactional" {
   password                = local.transactional_root_password
   storage_type            = "gp2"
   backup_retention_period = 0
-  publicly_accessible     = true
-  skip_final_snapshot     = true
-  vpc_security_group_ids  = [aws_security_group.transactional_database_sg.id]
+  publicly_accessible     = true #tfsec:ignore:aws-rds-no-public-db-access
+  # Posteriormente foi colocado um security group
+  # para permitir acesso apenas do meu IP público.
+  skip_final_snapshot    = true
+  vpc_security_group_ids = [aws_security_group.transactional_database_sg.id]
 }
 
 
@@ -101,7 +123,8 @@ provider "docker" {
 }
 
 module "docker_image" {
-  source = "terraform-aws-modules/lambda/aws//modules/docker-build"
+  source  = "terraform-aws-modules/lambda/aws//modules/docker-build"
+  version = "~> 6.0.0"
 
   create_ecr_repo = true
   ecr_repo        = "insert_fake_data"
@@ -154,14 +177,15 @@ resource "aws_security_group" "insert_fake_data_sg" {
 
 
 resource "aws_vpc_security_group_egress_rule" "lambda_insert_fake_data_egress" {
-  security_group_id = aws_security_group.insert_fake_data_sg.id
-  description = "Access Transactional Postgres Database"
-  ip_protocol = "-1"
+  security_group_id            = aws_security_group.insert_fake_data_sg.id
+  description                  = "Access Transactional Postgres Database"
+  ip_protocol                  = "-1"
   referenced_security_group_id = aws_security_group.transactional_database_sg.id
 }
 
 module "lambda_function" {
-  source = "terraform-aws-modules/lambda/aws"
+  source  = "terraform-aws-modules/lambda/aws"
+  version = "~> 6.0.0"
 
   function_name  = "insert_fake_data"
   create_package = false
@@ -184,4 +208,3 @@ module "lambda_function" {
   vpc_subnet_ids         = data.aws_subnets.all.ids
   vpc_security_group_ids = [aws_security_group.insert_fake_data_sg.id]
 }
-
