@@ -23,6 +23,12 @@ Com relação a qual parte do projeto será desenvolvida em qual encontro, segue
 
 _Gif criada utilizando a plataforma online [ezgif](https://ezgif.com/maker). Delay Time 2.5s._
 
+
+# Testes
+Perceba a inclusão de regras de revisão de código ([CODEOWNERS](.github/CODEOWNERS)) e também do pre-commit.
+
+Para mais informações do pre-commit, [acesse aqui](./encontros/7_revisao_testes/README.md).
+
 # Links Úteis
 - [Memberkit (Plataforma Aprendizado How)](https://how-bootcamps.memberkit.com.br/)
 
@@ -30,4 +36,3 @@ _Gif criada utilizando a plataforma online [ezgif](https://ezgif.com/maker). Del
 # Referências de Aprendizado
 - [Fundamentals of Data Engineering (by Joe Reis, Matt Housley)](https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/): Literatura base recomendada em engenharia de dados.
 - [AWS Analytics Lens (FREE!)](https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/analytics-lens.html): Coleção de boas práticas da AWS para construção de arquiteturas analíticas.
-  

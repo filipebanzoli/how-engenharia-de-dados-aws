@@ -1,0 +1,65 @@
+name: CI Build
+
+on:
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHON_VERSION: "3.9"
+
+jobs:
+  CI:
+    name: "Okay to Merge"
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: dorny/paths-filter@v2
+        name: Checking for changes
+        id: changes
+        with:
+          list-files: shell
+          filters: |
+            changed:
+              - added|modified: '**'
+
+      - name: Set up Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - uses: actions/cache@v2
+        name: Caching envs
+        id: cache-env
+        with:
+          path: |
+            ${{ env.pythonLocation }}
+            ~/.cache/pre-commit
+            ~/.cache/airflowdb
+          key: ci-${{ runner.os }}-${{ env.pythonLocation }}-${{ hashFiles('.pre-commit-config.yaml') }}
+
+      - name: Installing dependencies
+        if: steps.cache-env.outputs.cache-hit != 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends build-essential libsasl2-dev
+          sudo apt-get autoremove -yqq --purge
+          sudo apt-get clean
+          sudo rm -rf /var/lib/apt/lists/*
+          pip install --upgrade pip
+          echo "INSTALL REQUIREMENTS"
+          pip install pre-commit
+          echo "EXECUTE PRE COMMIT"
+          pre-commit
+
+      - name: Pip Freeze
+        run: pip freeze
+
+      - name: Pre-commit validation
+        run: pre-commit run --color always --files ${{ steps.changes.outputs.changed_files }}

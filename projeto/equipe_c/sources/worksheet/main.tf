@@ -13,7 +13,7 @@ provider "aws" {
   region = "us-east-1"
   default_tags {
     tags = {
-      Owner = "equipe_b"
+      Owner = "equipe_c"
     }
   }
 }

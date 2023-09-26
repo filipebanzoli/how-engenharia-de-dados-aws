@@ -69,5 +69,3 @@ Ref: product.id < order_products.product_id
 Ref: order.id < order_products.order_id
 Ref: client.address_id - address.id
 Ref: supplier.address_id - address.id
-
-
