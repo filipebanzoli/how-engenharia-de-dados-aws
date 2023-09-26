@@ -54,7 +54,7 @@ jobs:
           sudo rm -rf /var/lib/apt/lists/*
           pip install --upgrade pip
           echo "INSTALL REQUIREMENTS"
-          pip install --no-deps pre-commit
+          pip install pre-commit
           echo "EXECUTE PRE COMMIT"
           pre-commit
 
