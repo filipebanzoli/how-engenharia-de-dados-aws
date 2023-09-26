@@ -17,9 +17,18 @@ provider "aws" {
   }
 }
 
+
+# Configura a conta
+data "aws_caller_identity" "current" {}
+
+# Busca a conta  AWS Account ID
+locals {
+  aws_account_id = data.aws_caller_identity.current.account_id
+}
+
 # Resource Datalake
 resource "aws_s3_bucket" "datalake" {
-  bucket = "prd-datalake-team-c"
+  bucket = "prd-datalake-team-c-${local.aws_account_id}"
 
   tags = {
     Environment = "Dev"
@@ -39,10 +48,6 @@ resource "aws_s3_bucket_public_access_block" "block_datalake" {
 # Usuário airbyte acessos
 resource "aws_iam_user" "airbyte-stream" {
   name = "user_airbyte"
-
-  tags = {
-    tag-key = "user_airbyte"
-  }
 }
 
 resource "aws_iam_access_key" "ak_airbyte_user" {
