@@ -1,10 +1,6 @@
-
-
-
-def soma(x:int, y:int):
-
+def soma(x: int, y: int):
     resultado = x + y
     return resultado
 
 
-print(soma('a', 'b'))
+print(soma("a", "b"))

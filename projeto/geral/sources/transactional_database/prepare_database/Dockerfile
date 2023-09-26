@@ -7,7 +7,7 @@ WORKDIR /app
 COPY . .
 
 # upgrade pip and install pip packages
-RUN pip install --no-cache-dir -r requirements.txt 
+RUN pip install --no-cache-dir -r requirements.txt
 
 # run python program
 CMD ["python", "main.py"]

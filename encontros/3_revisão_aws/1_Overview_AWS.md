@@ -102,7 +102,7 @@ DMS (Database Migration Service):
 - (a) Hospedar bancos de dados relacionais.
 - (b) Armazenar arquivos em bloco.
 - (c) Processar grandes volumes de dados utilizando frameworks de processamento distribuído.
-- (d) Criar redes privadas virtuais. 
+- (d) Criar redes privadas virtuais.
 
 15.  O que é o AWS Lake Formation?
 - (a) Um serviço para armazenamento de objetos na nuvem.
@@ -116,7 +116,7 @@ DMS (Database Migration Service):
 - (c) Criar APIs escaláveis para aplicativos móveis.
 - (d) Facilitar a construção, treinamento e implantação de modelos de machine learning.
 
-_Respostas do questionário aqui. [Perguntas feitas pelo chatGPT](https://chat.openai.com/share/e0784cf5-72a8-4feb-b3a6-459b0b2d2113)._ 
+_Respostas do questionário aqui. [Perguntas feitas pelo chatGPT](https://chat.openai.com/share/e0784cf5-72a8-4feb-b3a6-459b0b2d2113)._
 
 [Esses são justamente os serviços da AWS que iremos utilizar em nosso projeto!](/Projeto.png) (além desses serviços usaremos outros também, de acordo com a necessidade).
 
@@ -139,4 +139,3 @@ Ententendo a questão de Região e Zona de Disponibilidade da AWS.
 Não se esqueçam que AWS nada mais é do que uma provedora de serviços de computação, e para tal fim ela possui centenas de data centers espalhados pelo mundo, agrupados de uma maneira organizada para atender sua demanda.
 
 https://aws.amazon.com/pt/about-aws/global-infrastructure/?p=ngi&loc=1
-
