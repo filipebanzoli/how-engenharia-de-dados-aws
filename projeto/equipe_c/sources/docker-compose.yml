@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  localstack:
+    image: localstack/localstack:latest
+    environment: 
+      - AWS_DEFAULT_REGION=us-east-1
+      - EDGE_PORT=4566
+      - SERVICES=lambda,s3
+    ports:
+      - '4566-4587:4566-4587'
+    volumes:
+      - localstack-data:/tmp/localstack
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    networks:
+      - dev_to
+
+volumes:
+  localstack-data:
+    name: localstack-data
+
+networks:
+  dev_to:
+    name: dev_to
