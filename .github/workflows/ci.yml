@@ -3,6 +3,8 @@ name: CI Build
 on:
   pull_request:
     branches: [main]
+  push:
+    branches: [main]
 
 concurrency:
   group: ci-${{ github.event.pull_request.number || github.ref }}
@@ -41,7 +43,6 @@ jobs:
           path: |
             ${{ env.pythonLocation }}
             ~/.cache/pre-commit
-            ~/.cache/airflowdb
           key: ci-${{ runner.os }}-${{ env.pythonLocation }}-${{ hashFiles('.pre-commit-config.yaml') }}
 
       - name: Installing dependencies
@@ -54,8 +55,10 @@ jobs:
           sudo rm -rf /var/lib/apt/lists/*
           pip install --upgrade pip
           echo "INSTALL REQUIREMENTS"
+          curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
+          curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install_linux.sh | bash
           pip install pre-commit
-          echo "EXECUTE PRE COMMIT"
+          echo "TESTING A SUCCESSFUL PRE COMMIT RUN"
           pre-commit
 
       - name: Pip Freeze
