@@ -58,7 +58,7 @@ jobs:
           curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
           curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install_linux.sh | bash
           pip install pre-commit
-          echo "TESTING A SUCCESSFUL PRE COMMIT RUN"
+          echo "TESTING A SUCCESSFUL PRE COMMIT RUN AND INSTALLING DEPENDENCIES"
           pre-commit
 
       - name: Pip Freeze
