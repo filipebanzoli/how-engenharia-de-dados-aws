@@ -1,33 +1,26 @@
+import json
 import requests
 from bs4 import BeautifulSoup
+from abc import ABC, abstractmethod
+from projeto.equipe_c.sources.utils.utils import get_nested_dict_attr_value
 
 
-def get_nested_dict_attr_value(tag, attr):
-    attr_dict = {}
-    if hasattr(tag, 'children'):
-        for subtag in tag.children:
-            if hasattr(subtag, 'attrs') and attr in subtag.attrs:
-                classes = " ".join(subtag.attrs[attr])
-                attr_dict[classes] = subtag.get_text()
-            attr_dict.update(get_nested_dict_attr_value(subtag, attr))
-    return attr_dict
+class PaoDeAcucarWebScrapping(ABC):
+    def __init__(self) -> None:
+        self.base_url = "https://www.paodeacucar.com/"
 
+    def scrapping_data(self, produto: str) -> json:
+        url = self.base_url + produto
 
+        response = requests.get(url)
 
-search = 'arroz'
-search_converter = search.replace(' ', '-')
-url = f'https://www.condor.com.br/pesquisa-usuario/{search_converter}'
+        soup = BeautifulSoup(response.text)
 
-response = requests.get(url)
+        products = soup.find("div", {"class": "row mb-4"}).findAll("app-product")
 
-soup = BeautifulSoup(response.text)
-products = soup.find("div", {"class": "row mb-4"}).findAll("app-product")
+        products_data = []
+        for product in products:
+            products_data.append(get_nested_dict_attr_value(product, 'class'))    
 
-
-products_data = []
-for product in products:
-    products_data.append(get_nested_dict_attr_value(product, 'class'))
-
-
-products_data
+        return json.dumps(products_data)            
 
