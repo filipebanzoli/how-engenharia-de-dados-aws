@@ -6,13 +6,13 @@ from projeto.equipe_c.sources.utils.utils import get_nested_dict_attr_value
 
 
 class PaoDeAcucarWebScrapping(ABC):
-    def __init__(self) -> None:
-        self.base_url = "https://www.paodeacucar.com/"
+    def __init__(self, produto: str) -> None:
+        self.base_url = "https://www.paodeacucar.com/busca?terms="
+        self.produto = produto
+        self.url = self.base_url + self.produto
 
     def scrapping_data(self, produto: str) -> json:
-        url = self.base_url + produto
-
-        response = requests.get(url)
+        response = requests.get(self.url)
 
         soup = BeautifulSoup(response.text)
 
