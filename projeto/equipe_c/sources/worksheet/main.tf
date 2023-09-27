@@ -34,7 +34,6 @@ resource "aws_s3_bucket" "datalake" {
     Environment = "Dev"
   }
 }
-
 # Bucket Block
 resource "aws_s3_bucket_public_access_block" "block_datalake" {
   bucket = aws_s3_bucket.datalake.id
@@ -54,8 +53,30 @@ resource "aws_iam_access_key" "ak_airbyte_user" {
   user = aws_iam_user.airbyte-stream.name
 }
 
+data "aws_iam_policy_document" "policy_document" {
+  
+  statement {
+    effect = "Allow"
+    actions = [
+          "s3:PutObject",
+          "s3:GetObject",
+          "s3:DeleteObject",
+          "s3:PutObjectAcl",
+          "s3:ListBucket",
+          "s3:ListBucketMultipartUploads",
+          "s3:AbortMultipartUpload",
+          "s3:GetBucketLocation"
+    ]
+    resources = [
+      "arn:aws:s3:::${aws_s3_bucket.datalake.bucket}/*",
+      "arn:aws:s3:::${aws_s3_bucket.datalake.bucket}",
+    ]
+  }
+}
+
 resource "aws_iam_user_policy" "airbyte_policy" {
   name   = "airbyte_policy"
   user   = aws_iam_user.airbyte-stream.name
-  policy = file("${path.module}/policy-airbyte-user.json")
+  policy = data.aws_iam_policy_document.policy_document.json
 }
+
