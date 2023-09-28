@@ -1,0 +1,50 @@
+# Created by https://www.toptal.com/developers/gitignore/api/scala,macOS
+# Edit at https://www.toptal.com/developers/gitignore?templates=scala,macOS
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### macOS Patch ###
+# iCloud generated files
+*.icloud
+
+### Scala ###
+*.class
+*.log
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+*terraform*
+pyproject*
+
+# End of https://www.toptal.com/developers/gitignore/api/scala,macOS
+
+# Generated using ignr.py - github.com/Antrikshy/ignr.py
+
