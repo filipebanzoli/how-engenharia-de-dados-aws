@@ -41,8 +41,13 @@ Temporary Items
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
+
+#Terraform
 *terraform*
+
+#Poetry
 pyproject*
+poetry.lock
 
 # End of https://www.toptal.com/developers/gitignore/api/scala,macOS
 
