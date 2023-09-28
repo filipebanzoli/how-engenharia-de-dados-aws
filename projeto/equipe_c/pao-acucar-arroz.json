@@ -1,0 +1,3521 @@
+{
+  "requestId": "adfdd8d3-5b9c-4cc9-9345-bb0569877cb0",
+  "searchId": "adfdd8d3-5b9c-4cc9-9345-bb0569877cb0",
+  "suggestions": [
+    {
+      "query": "arroz electrolux",
+      "link": "/engage/search/v3/search?origin=suggestion&apikey=paodeacucar&terms=arroz+electrolux&resultsperpage=5"
+    },
+    {
+      "query": "arroz mondial",
+      "link": "/engage/search/v3/search?origin=suggestion&apikey=paodeacucar&terms=arroz+mondial&resultsperpage=5"
+    },
+    {
+      "query": "arroz 1 litros",
+      "link": "/engage/search/v3/search?origin=suggestion&apikey=paodeacucar&terms=arroz+1+litros&resultsperpage=5"
+    }
+  ],
+  "filters": [
+    {
+      "id": 1,
+      "attribute": "Categoria",
+      "type": "discrete",
+      "fType": 1,
+      "values": [
+        {
+          "label": "Alimentos",
+          "size": 628,
+          "idO": "Alimentos",
+          "id": 4,
+          "filters": [
+            {
+              "label": "Básico da despensa",
+              "size": 504,
+              "idO": "Básico da despensa",
+              "id": 8,
+              "filters": [
+                {
+                  "label": "Massas",
+                  "size": 334,
+                  "idO": "Massas",
+                  "id": 442,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:442"
+                },
+                {
+                  "label": "Grãos e Cereais",
+                  "size": 164,
+                  "idO": "Grãos e Cereais",
+                  "id": 198,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:198"
+                },
+                {
+                  "label": "Farináceos",
+                  "size": 3,
+                  "idO": "Farináceos",
+                  "id": 9,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:9"
+                },
+                {
+                  "label": "Sopas e cremes",
+                  "size": 3,
+                  "idO": "Sopas e cremes",
+                  "id": 14,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:14"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:8"
+            },
+            {
+              "label": "Rotisserie",
+              "size": 52,
+              "idO": "Rotisserie",
+              "id": 587,
+              "filters": [
+                {
+                  "label": "Pratos resfriados",
+                  "size": 24,
+                  "idO": "Pratos resfriados",
+                  "id": 804,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:804"
+                },
+                {
+                  "label": "Guarnições e acompanhamentos",
+                  "size": 16,
+                  "idO": "Guarnições e acompanhamentos",
+                  "id": 658,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:658"
+                },
+                {
+                  "label": "Outros itens de rotisserie",
+                  "size": 9,
+                  "idO": "Outros itens de rotisserie",
+                  "id": 588,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:588"
+                },
+                {
+                  "label": "Carnes e Peixes",
+                  "size": 3,
+                  "idO": "Carnes e Peixes",
+                  "id": 805,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:805"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:587"
+            },
+            {
+              "label": "Biscoitos, salgadinhos e snacks",
+              "size": 22,
+              "idO": "Biscoitos, salgadinhos e snacks",
+              "id": 328,
+              "filters": [
+                {
+                  "label": "Biscoitos e bolachas",
+                  "size": 16,
+                  "idO": "Biscoitos e bolachas",
+                  "id": 524,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:524"
+                },
+                {
+                  "label": "Salgadinhos e snacks",
+                  "size": 6,
+                  "idO": "Salgadinhos e snacks",
+                  "id": 329,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:329"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:328"
+            },
+            {
+              "label": "Congelados",
+              "size": 21,
+              "idO": "Congelados",
+              "id": 97,
+              "filters": [
+                {
+                  "label": "Pratos prontos",
+                  "size": 18,
+                  "idO": "Pratos prontos",
+                  "id": 98,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:98"
+                },
+                {
+                  "label": "Legumes congelados",
+                  "size": 2,
+                  "idO": "Legumes congelados",
+                  "id": 880,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:880"
+                },
+                {
+                  "label": "Outros congelados",
+                  "size": 1,
+                  "idO": "Outros congelados",
+                  "id": 1018,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:1018"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:97"
+            },
+            {
+              "label": "Molhos, temperos e condimentos",
+              "size": 20,
+              "idO": "Molhos, temperos e condimentos",
+              "id": 605,
+              "filters": [
+                {
+                  "label": "Molhos e condimentos",
+                  "size": 20,
+                  "idO": "Molhos e condimentos",
+                  "id": 606,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:606"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:605"
+            },
+            {
+              "label": "Legumes e verduras",
+              "size": 5,
+              "idO": "Legumes e verduras",
+              "id": 449,
+              "filters": [
+                {
+                  "label": "Legumes",
+                  "size": 3,
+                  "idO": "Legumes",
+                  "id": 450,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:450"
+                },
+                {
+                  "label": "Verduras",
+                  "size": 2,
+                  "idO": "Verduras",
+                  "id": 530,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:530"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:449"
+            },
+            {
+              "label": "Doces e sobremesas",
+              "size": 3,
+              "idO": "Doces e sobremesas",
+              "id": 57,
+              "filters": [
+                {
+                  "label": "Bomboniere",
+                  "size": 2,
+                  "idO": "Bomboniere",
+                  "id": 58,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:58"
+                },
+                {
+                  "label": "Outros doces",
+                  "size": 1,
+                  "idO": "Outros doces",
+                  "id": 150,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:150"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:57"
+            },
+            {
+              "label": "Peixaria",
+              "size": 1,
+              "idO": "Peixaria",
+              "id": 173,
+              "filters": [
+                {
+                  "label": "Pescados",
+                  "size": 1,
+                  "idO": "Pescados",
+                  "id": 520,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:520"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:173"
+            }
+          ],
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:4"
+        },
+        {
+          "label": "Petshop",
+          "size": 99,
+          "idO": "Petshop",
+          "id": 1058,
+          "filters": [
+            {
+              "label": "Cães",
+              "size": 76,
+              "idO": "Cães",
+              "id": 1671,
+              "filters": [
+                {
+                  "label": "Alimentação",
+                  "size": 76,
+                  "idO": "Alimentação",
+                  "id": 3195,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:3195"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:1671"
+            },
+            {
+              "label": "Gatos",
+              "size": 22,
+              "idO": "Gatos",
+              "id": 3199,
+              "filters": [
+                {
+                  "label": "Alimentação",
+                  "size": 22,
+                  "idO": "Alimentação",
+                  "id": 3206,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:3206"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:3199"
+            },
+            {
+              "label": "Outros animais",
+              "size": 1,
+              "idO": "Outros animais",
+              "id": 1059,
+              "filters": [
+                {
+                  "label": "Alimentação",
+                  "size": 1,
+                  "idO": "Alimentação",
+                  "id": 2495,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:2495"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:1059"
+            }
+          ],
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:1058"
+        },
+        {
+          "label": "Utensílios e descartáveis",
+          "size": 59,
+          "idO": "Utensílios e descartáveis",
+          "id": 324,
+          "filters": [
+            {
+              "label": "Utensílios para a casa",
+              "size": 59,
+              "idO": "Utensílios para a casa",
+              "id": 325,
+              "filters": [
+                {
+                  "label": "Talheres",
+                  "size": 33,
+                  "idO": "Talheres",
+                  "id": 3313,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:3313"
+                },
+                {
+                  "label": "Outros utensílios",
+                  "size": 16,
+                  "idO": "Outros utensílios",
+                  "id": 936,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:936"
+                },
+                {
+                  "label": "Panelas e caçarolas",
+                  "size": 5,
+                  "idO": "Panelas e caçarolas",
+                  "id": 1471,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:1471"
+                },
+                {
+                  "label": "Pratos e aparelhos de jantar",
+                  "size": 2,
+                  "idO": "Pratos e aparelhos de jantar",
+                  "id": 3309,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:3309"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:325"
+            }
+          ],
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:324"
+        },
+        {
+          "label": "Eletroportáteis",
+          "size": 56,
+          "idO": "Eletroportáteis",
+          "id": 133149,
+          "filters": [
+            {
+              "label": "Para a cozinha",
+              "size": 56,
+              "idO": "Para a cozinha",
+              "id": 133150,
+              "filters": [
+                {
+                  "label": "Panelas elétricas",
+                  "size": 55,
+                  "idO": "Panelas elétricas",
+                  "id": 142555,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:142555"
+                },
+                {
+                  "label": "Outros eletroportáteis para cozinha",
+                  "size": 1,
+                  "idO": "Outros eletroportáteis para cozinha",
+                  "id": 133151,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:133151"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:133150"
+            }
+          ],
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:133149"
+        },
+        {
+          "label": "Bebês e crianças",
+          "size": 14,
+          "idO": "Bebês e crianças",
+          "id": 53,
+          "filters": [
+            {
+              "label": "Hora de comer",
+              "size": 14,
+              "idO": "Hora de comer",
+              "id": 54,
+              "filters": [
+                {
+                  "label": "Outros produtos",
+                  "size": 11,
+                  "idO": "Outros produtos",
+                  "id": 695,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:695"
+                },
+                {
+                  "label": "Papinhas",
+                  "size": 3,
+                  "idO": "Papinhas",
+                  "id": 3254,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:3254"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:54"
+            }
+          ],
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:53"
+        },
+        {
+          "label": "Suplementos alimentares",
+          "size": 13,
+          "idO": "Suplementos alimentares",
+          "id": 710,
+          "filters": [
+            {
+              "label": "Suplementos esportivos",
+              "size": 10,
+              "idO": "Suplementos esportivos",
+              "id": 711,
+              "filters": [
+                {
+                  "label": "Outros suplementos",
+                  "size": 6,
+                  "idO": "Outros suplementos",
+                  "id": 712,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:712"
+                },
+                {
+                  "label": "Proteínas e aminoácidos",
+                  "size": 4,
+                  "idO": "Proteínas e aminoácidos",
+                  "id": 2397,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:2397"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:711"
+            },
+            {
+              "label": "Vitaminas e complementos alimentares",
+              "size": 3,
+              "idO": "Vitaminas e complementos alimentares",
+              "id": 2896,
+              "filters": [
+                {
+                  "label": "Outros complementos alimentares",
+                  "size": 2,
+                  "idO": "Outros complementos alimentares",
+                  "id": 134064,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:134064"
+                },
+                {
+                  "label": "Vitaminas e minerais",
+                  "size": 1,
+                  "idO": "Vitaminas e minerais",
+                  "id": 2897,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:2897"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:2896"
+            }
+          ],
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:710"
+        },
+        {
+          "label": "Bebidas",
+          "size": 6,
+          "idO": "Bebidas",
+          "id": 74,
+          "filters": [
+            {
+              "label": "Leites",
+              "size": 4,
+              "idO": "Leites",
+              "id": 1977,
+              "filters": [
+                {
+                  "label": "Leites vegetais",
+                  "size": 4,
+                  "idO": "Leites vegetais",
+                  "id": 1978,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:1978"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:1977"
+            }
+          ],
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:74"
+        },
+        {
+          "label": "Beleza e perfumaria",
+          "size": 4,
+          "idO": "Beleza e perfumaria",
+          "id": 27,
+          "filters": [
+            {
+              "label": "Corpo",
+              "size": 4,
+              "idO": "Corpo",
+              "id": 944,
+              "filters": [
+                {
+                  "label": "Óleos corporais",
+                  "size": 4,
+                  "idO": "Óleos corporais",
+                  "id": 945,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:945"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:944"
+            }
+          ],
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:27"
+        },
+        {
+          "label": "Cama, mesa e banho",
+          "size": 4,
+          "idO": "Cama, mesa e banho",
+          "id": 315,
+          "filters": [
+            {
+              "label": "Mesa",
+              "size": 4,
+              "idO": "Mesa",
+              "id": 2203,
+              "filters": [
+                {
+                  "label": "Acessórios para a mesa",
+                  "size": 4,
+                  "idO": "Acessórios para a mesa",
+                  "id": 2205,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:2205"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:2203"
+            }
+          ],
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:315"
+        },
+        {
+          "label": "Móveis e decoração",
+          "size": 2,
+          "idO": "Móveis e decoração",
+          "id": 210,
+          "filters": [
+            {
+              "label": "Decoração",
+              "size": 1,
+              "idO": "Decoração",
+              "id": 1088,
+              "filters": [
+                {
+                  "label": "Papel de parede e adesivos",
+                  "size": 1,
+                  "idO": "Papel de parede e adesivos",
+                  "id": 1678,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:1678"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:1088"
+            },
+            {
+              "label": "Cozinha",
+              "size": 1,
+              "idO": "Cozinha",
+              "id": 1209,
+              "filters": [
+                {
+                  "label": "Conjuntos",
+                  "size": 1,
+                  "idO": "Conjuntos",
+                  "id": 1432,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:1432"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:1209"
+            }
+          ],
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:210"
+        },
+        {
+          "label": "Brinquedos e jogos",
+          "size": 2,
+          "idO": "Brinquedos e jogos",
+          "id": 819,
+          "filters": [
+            {
+              "label": "Brinquedos",
+              "size": 2,
+              "idO": "Brinquedos",
+              "id": 1268,
+              "filters": [
+                {
+                  "label": "Massinhas e slimes",
+                  "size": 2,
+                  "idO": "Massinhas e slimes",
+                  "id": 3292,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:3292"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:1268"
+            }
+          ],
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:819"
+        },
+        {
+          "label": "Bebidas alcóolicas",
+          "size": 1,
+          "idO": "Bebidas alcóolicas",
+          "id": 140,
+          "filters": [
+            {
+              "label": "Cervejas",
+              "size": 1,
+              "idO": "Cervejas",
+              "id": 141,
+              "filters": [
+                {
+                  "label": "Cervejas Especiais e artesanais",
+                  "size": 1,
+                  "idO": "Cervejas Especiais e artesanais",
+                  "id": 142,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:142"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:141"
+            }
+          ],
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:140"
+        },
+        {
+          "label": "Eletrodomésticos",
+          "size": 1,
+          "idO": "Eletrodomésticos ",
+          "id": 142399,
+          "filters": [
+            {
+              "label": "Para a cozinha",
+              "size": 1,
+              "idO": "Para a cozinha",
+              "id": 142400,
+              "filters": [
+                {
+                  "label": "Fornos elétricos e à gás",
+                  "size": 1,
+                  "idO": "Fornos elétricos e à gás",
+                  "id": 142704,
+                  "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:142704"
+                }
+              ],
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:142400"
+            }
+          ],
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:142399"
+        },
+        {
+          "label": "Dia dos Pais",
+          "size": 1,
+          "idO": "Dia dos Pais",
+          "id": 419217,
+          "filters": [
+            {
+              "label": "Acompanhamentos",
+              "size": 1,
+              "idO": "Acompanhamentos",
+              "id": 419218,
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:419218"
+            }
+          ],
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:419217"
+        },
+        {
+          "label": "Dia das Mães",
+          "size": 1,
+          "idO": "Dia das Mães",
+          "id": 487054,
+          "filters": [
+            {
+              "label": "Acompanhamentos",
+              "size": 1,
+              "idO": "Acompanhamentos",
+              "id": 487058,
+              "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:487058"
+            }
+          ],
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:1:487054"
+        }
+      ]
+    },
+    {
+      "id": 3714,
+      "attribute": "Vendido Por",
+      "type": "discrete",
+      "values": [
+        {
+          "label": "Pão de açucar",
+          "size": 682,
+          "id": 3727,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3714:3727"
+        },
+        {
+          "label": "Lojas Parceiras",
+          "size": 210,
+          "id": 3715,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3714:3715"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "attribute": "Preço",
+      "type": "continuous",
+      "fType": 2,
+      "values": [
+        {
+          "size": 450,
+          "unityId": 3,
+          "unN": "rs",
+          "min": { "value": 0, "unity": "rs", "minN": 0 },
+          "max": { "value": 10, "unity": "rs", "maxN": 10 },
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=c:2:3:0:10"
+        },
+        {
+          "size": 265,
+          "unityId": 3,
+          "unN": "rs",
+          "min": { "value": 10, "unity": "rs", "minN": 10 },
+          "max": { "value": 20, "unity": "rs", "maxN": 20 },
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=c:2:3:10:20"
+        },
+        {
+          "size": 115,
+          "unityId": 3,
+          "unN": "rs",
+          "min": { "value": 20, "unity": "rs", "minN": 20 },
+          "max": { "value": 30, "unity": "rs", "maxN": 30 },
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=c:2:3:20:30"
+        },
+        {
+          "size": 88,
+          "unityId": 3,
+          "unN": "rs",
+          "min": { "value": 30, "unity": "rs", "minN": 30 },
+          "max": { "value": 50, "unity": "rs", "maxN": 50 },
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=c:2:3:30:50"
+        },
+        {
+          "size": 94,
+          "unityId": 3,
+          "unN": "rs",
+          "min": { "value": 50, "unity": "rs", "minN": 50 },
+          "max": { "value": 150, "unity": "rs", "maxN": 150 },
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=c:2:3:50:150"
+        },
+        {
+          "size": 88,
+          "unityId": 3,
+          "unN": "rs",
+          "min": { "value": 150, "unity": "rs", "minN": 150 },
+          "max": { "value": 1800, "unity": "rs", "maxN": 1800 },
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=c:2:3:150:1800"
+        }
+      ]
+    },
+    {
+      "id": 3718,
+      "attribute": "Isexclusivedepartment",
+      "type": "discrete",
+      "values": [
+        {
+          "label": "False",
+          "size": 879,
+          "id": 3719,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3718:3719"
+        },
+        {
+          "label": "True",
+          "size": 13,
+          "id": 29401,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3718:29401"
+        }
+      ]
+    },
+    {
+      "id": 3738,
+      "attribute": "Marca",
+      "type": "discrete",
+      "values": [
+        {
+          "label": "Qualitá",
+          "size": 34,
+          "id": 3739,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:3739"
+        },
+        {
+          "label": "Nissin",
+          "size": 33,
+          "id": 8506,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:8506"
+        },
+        {
+          "label": "Adria",
+          "size": 32,
+          "id": 20137,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:20137"
+        },
+        {
+          "label": "De cecco",
+          "size": 29,
+          "id": 75008,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:75008"
+        },
+        {
+          "label": "Barilla",
+          "size": 28,
+          "id": 10624,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:10624"
+        },
+        {
+          "label": "Divella",
+          "size": 17,
+          "id": 257322,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:257322"
+        },
+        {
+          "label": "Garofalo",
+          "size": 17,
+          "id": 410676,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:410676"
+        },
+        {
+          "label": "Renata",
+          "size": 15,
+          "id": 9787,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:9787"
+        },
+        {
+          "label": "La molisana",
+          "size": 15,
+          "id": 272650,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:272650"
+        },
+        {
+          "label": "Taeq",
+          "size": 12,
+          "id": 8356,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:8356"
+        },
+        {
+          "label": "Dog chow",
+          "size": 11,
+          "id": 4334,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:4334"
+        },
+        {
+          "label": "Casíno",
+          "size": 10,
+          "id": 13016,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:13016"
+        },
+        {
+          "label": "Petybon",
+          "size": 10,
+          "id": 169704,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:169704"
+        },
+        {
+          "label": "Camil",
+          "size": 8,
+          "id": 10514,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:10514"
+        },
+        {
+          "label": "Fasano",
+          "size": 8,
+          "id": 272425,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:272425"
+        },
+        {
+          "label": "Miojo",
+          "size": 8,
+          "id": 276908,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:276908"
+        },
+        {
+          "label": "Giovani cocco",
+          "size": 7,
+          "id": 349460,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:349460"
+        },
+        {
+          "label": "Wakas",
+          "size": 7,
+          "id": 417546,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:417546"
+        },
+        {
+          "label": "Marca indefinida",
+          "size": 6,
+          "id": 254201,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:254201"
+        },
+        {
+          "label": "Rustichella",
+          "size": 6,
+          "id": 273859,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:273859"
+        },
+        {
+          "label": "Knorr",
+          "size": 5,
+          "id": 6133,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:6133"
+        },
+        {
+          "label": "Galo",
+          "size": 5,
+          "id": 46238,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:46238"
+        },
+        {
+          "label": "Kalassi",
+          "size": 5,
+          "id": 171919,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:171919"
+        },
+        {
+          "label": "Mosmann",
+          "size": 5,
+          "id": 264274,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:264274"
+        },
+        {
+          "label": "Latinex",
+          "size": 5,
+          "id": 281199,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:281199"
+        },
+        {
+          "label": "De",
+          "size": 4,
+          "id": 31354,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:31354"
+        },
+        {
+          "label": "Giuseppe cocco",
+          "size": 4,
+          "id": 349428,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:349428"
+        },
+        {
+          "label": "Kitano",
+          "size": 3,
+          "id": 9364,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:9364"
+        },
+        {
+          "label": "Urbano",
+          "size": 3,
+          "id": 117153,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:117153"
+        },
+        {
+          "label": "Santa amália",
+          "size": 3,
+          "id": 178752,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:178752"
+        },
+        {
+          "label": "Keldog",
+          "size": 2,
+          "id": 4805,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:4805"
+        },
+        {
+          "label": "Tio joão",
+          "size": 2,
+          "id": 9898,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:9898"
+        },
+        {
+          "label": "Tai kalassi",
+          "size": 2,
+          "id": 27977,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:27977"
+        },
+        {
+          "label": "Sazon",
+          "size": 2,
+          "id": 29911,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:29911"
+        },
+        {
+          "label": "Tra grani",
+          "size": 2,
+          "id": 96168,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:96168"
+        },
+        {
+          "label": "Dona benta",
+          "size": 2,
+          "id": 119933,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:119933"
+        },
+        {
+          "label": "Pastarotti",
+          "size": 2,
+          "id": 171017,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:171017"
+        },
+        {
+          "label": "Okaki",
+          "size": 2,
+          "id": 189212,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:189212"
+        },
+        {
+          "label": "Bandeiras",
+          "size": 2,
+          "id": 254195,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:254195"
+        },
+        {
+          "label": "Karui",
+          "size": 2,
+          "id": 272729,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:272729"
+        },
+        {
+          "label": "La monalisana",
+          "size": 2,
+          "id": 484732,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:484732"
+        },
+        {
+          "label": "Castelo",
+          "size": 1,
+          "id": 11921,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:11921"
+        },
+        {
+          "label": "Kenko",
+          "size": 1,
+          "id": 19199,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:19199"
+        },
+        {
+          "label": "Bio2",
+          "size": 1,
+          "id": 29641,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:29641"
+        },
+        {
+          "label": "Momiji",
+          "size": 1,
+          "id": 32959,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:32959"
+        },
+        {
+          "label": "Cup noodles",
+          "size": 1,
+          "id": 33720,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:33720"
+        },
+        {
+          "label": "Pantera",
+          "size": 1,
+          "id": 41070,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:41070"
+        },
+        {
+          "label": "Miyako",
+          "size": 1,
+          "id": 80014,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:80014"
+        },
+        {
+          "label": "Milnutri",
+          "size": 1,
+          "id": 105287,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:105287"
+        },
+        {
+          "label": "Laguna",
+          "size": 1,
+          "id": 149553,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3738:149553"
+        }
+      ]
+    },
+    {
+      "id": 3740,
+      "attribute": "Volume",
+      "type": "discrete",
+      "values": [
+        {
+          "label": "750ml",
+          "size": 3,
+          "id": 3848,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3740:3848"
+        },
+        {
+          "label": "500g",
+          "size": 106,
+          "id": 4335,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3740:4335"
+        },
+        {
+          "label": "1kg",
+          "size": 6,
+          "id": 3815,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3740:3815"
+        },
+        {
+          "label": "5kg",
+          "size": 2,
+          "id": 10515,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3740:10515"
+        },
+        {
+          "label": "200g",
+          "size": 2,
+          "id": 5156,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3740:5156"
+        },
+        {
+          "label": "3kg",
+          "size": 2,
+          "id": 13509,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3740:13509"
+        },
+        {
+          "label": "400g",
+          "size": 9,
+          "id": 4232,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3740:4232"
+        },
+        {
+          "label": "60g",
+          "size": 8,
+          "id": 6138,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3740:6138"
+        },
+        {
+          "label": "100g",
+          "size": 6,
+          "id": 4173,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3740:4173"
+        },
+        {
+          "label": "150g",
+          "size": 2,
+          "id": 9731,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3740:9731"
+        },
+        {
+          "label": "175g",
+          "size": 2,
+          "id": 12827,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3740:12827"
+        },
+        {
+          "label": "85g",
+          "size": 16,
+          "id": 6577,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3740:6577"
+        },
+        {
+          "label": "99g",
+          "size": 3,
+          "id": 20780,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3740:20780"
+        },
+        {
+          "label": "10,1kg",
+          "size": 2,
+          "id": 15311,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3740:15311"
+        },
+        {
+          "label": "88g",
+          "size": 2,
+          "id": 9569,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3740:9569"
+        },
+        {
+          "label": "130g",
+          "size": 1,
+          "id": 16030,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3740:16030"
+        }
+      ]
+    },
+    {
+      "id": 3722,
+      "attribute": "Desconto",
+      "type": "continuous",
+      "values": [
+        {
+          "size": 43,
+          "unityId": 3723,
+          "unN": "%",
+          "min": { "value": 5, "unity": "%", "minN": 5 },
+          "max": { "value": 15, "unity": "%", "maxN": 15 },
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=c:3722:3723:5:15"
+        },
+        {
+          "size": 11,
+          "unityId": 3723,
+          "unN": "%",
+          "min": { "value": 20, "unity": "%", "minN": 20 },
+          "max": { "value": 24, "unity": "%", "maxN": 24 },
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=c:3722:3723:20:24"
+        },
+        {
+          "size": 5,
+          "unityId": 3723,
+          "unN": "%",
+          "min": { "value": 43, "unity": "%", "minN": 43 },
+          "max": { "value": 58, "unity": "%", "maxN": 58 },
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=c:3722:3723:43:58"
+        }
+      ]
+    },
+    {
+      "id": 3736,
+      "attribute": "Tipo",
+      "type": "discrete",
+      "values": [
+        {
+          "label": "Biscoito salgado",
+          "size": 1,
+          "id": 4694,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:4694"
+        },
+        {
+          "label": "Parafuso",
+          "size": 7,
+          "id": 6850,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:6850"
+        },
+        {
+          "label": "Espaguete",
+          "size": 15,
+          "id": 9785,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:9785"
+        },
+        {
+          "label": "Penne",
+          "size": 7,
+          "id": 12720,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:12720"
+        },
+        {
+          "label": "Fusili",
+          "size": 5,
+          "id": 63528,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:63528"
+        },
+        {
+          "label": "Linguini",
+          "size": 2,
+          "id": 59622,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:59622"
+        },
+        {
+          "label": "Japonês",
+          "size": 2,
+          "id": 31353,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:31353"
+        },
+        {
+          "label": "Ninho",
+          "size": 4,
+          "id": 9914,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:9914"
+        },
+        {
+          "label": "Outros arroz",
+          "size": 2,
+          "id": 61069,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:61069"
+        },
+        {
+          "label": "Bavette",
+          "size": 2,
+          "id": 42217,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:42217"
+        },
+        {
+          "label": "Talharim",
+          "size": 2,
+          "id": 43976,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:43976"
+        },
+        {
+          "label": "Padre nosso",
+          "size": 2,
+          "id": 184258,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:184258"
+        },
+        {
+          "label": "Risoto",
+          "size": 1,
+          "id": 9897,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:9897"
+        },
+        {
+          "label": "Ave maria",
+          "size": 4,
+          "id": 113496,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:113496"
+        },
+        {
+          "label": "Tempero",
+          "size": 3,
+          "id": 6584,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:6584"
+        },
+        {
+          "label": "Adulto",
+          "size": 2,
+          "id": 4479,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:4479"
+        },
+        {
+          "label": "Penne rigate",
+          "size": 2,
+          "id": 38697,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:38697"
+        },
+        {
+          "label": "Instântaneo",
+          "size": 13,
+          "id": 9243,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:9243"
+        },
+        {
+          "label": "Cream cracker",
+          "size": 3,
+          "id": 13606,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:13606"
+        },
+        {
+          "label": "Cabelo de anjo",
+          "size": 2,
+          "id": 67663,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:67663"
+        },
+        {
+          "label": "Fettucine",
+          "size": 2,
+          "id": 11318,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:11318"
+        },
+        {
+          "label": "Tricolore",
+          "size": 2,
+          "id": 117018,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:117018"
+        },
+        {
+          "label": "Vinagre",
+          "size": 2,
+          "id": 26290,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:26290"
+        },
+        {
+          "label": "Argola",
+          "size": 1,
+          "id": 100140,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:100140"
+        },
+        {
+          "label": "Arroz basmati",
+          "size": 1,
+          "id": 346070,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:346070"
+        },
+        {
+          "label": "Arroz italiano",
+          "size": 1,
+          "id": 5053,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:5053"
+        },
+        {
+          "label": "Colher",
+          "size": 1,
+          "id": 434544,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:434544"
+        },
+        {
+          "label": "Espaguetinho",
+          "size": 1,
+          "id": 124249,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:124249"
+        },
+        {
+          "label": "Farfale",
+          "size": 1,
+          "id": 34051,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:34051"
+        },
+        {
+          "label": "Pó",
+          "size": 1,
+          "id": 13570,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:13570"
+        },
+        {
+          "label": "Salgadinho torrado",
+          "size": 1,
+          "id": 189211,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:189211"
+        },
+        {
+          "label": "Tipo 1",
+          "size": 1,
+          "id": 32958,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3736:32958"
+        }
+      ]
+    },
+    {
+      "id": 4104,
+      "attribute": "Integral",
+      "type": "discrete",
+      "values": [
+        {
+          "label": "Sim",
+          "size": 33,
+          "id": 4105,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:4104:4105"
+        }
+      ]
+    },
+    {
+      "id": 9137,
+      "attribute": "Sabor",
+      "type": "discrete",
+      "values": [
+        {
+          "label": "Original",
+          "size": 1,
+          "id": 389056,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:389056"
+        },
+        {
+          "label": "Multigrãos",
+          "size": 1,
+          "id": 389574,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:389574"
+        },
+        {
+          "label": "Arroz",
+          "size": 1,
+          "id": 389213,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:389213"
+        },
+        {
+          "label": "8 grãos",
+          "size": 1,
+          "id": 410538,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:410538"
+        },
+        {
+          "label": "Alfarroba",
+          "size": 1,
+          "id": 484415,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:484415"
+        },
+        {
+          "label": "Alga marinha",
+          "size": 1,
+          "id": 389197,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:389197"
+        },
+        {
+          "label": "Beterraba",
+          "size": 1,
+          "id": 178841,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:178841"
+        },
+        {
+          "label": "Bolonhesa",
+          "size": 1,
+          "id": 389225,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:389225"
+        },
+        {
+          "label": "Carfrangão",
+          "size": 1,
+          "id": 499875,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:499875"
+        },
+        {
+          "label": "Carne suave",
+          "size": 1,
+          "id": 391615,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:391615"
+        },
+        {
+          "label": "Couve",
+          "size": 1,
+          "id": 389587,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:389587"
+        },
+        {
+          "label": "Curry indiano",
+          "size": 1,
+          "id": 484478,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:484478"
+        },
+        {
+          "label": "Frango",
+          "size": 1,
+          "id": 389013,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:389013"
+        },
+        {
+          "label": "Funghi",
+          "size": 1,
+          "id": 389187,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:389187"
+        },
+        {
+          "label": "Galigumes",
+          "size": 1,
+          "id": 499880,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:499880"
+        },
+        {
+          "label": "Galinha",
+          "size": 1,
+          "id": 390923,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:390923"
+        },
+        {
+          "label": "Galinha suave",
+          "size": 1,
+          "id": 390862,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:390862"
+        },
+        {
+          "label": "Mel",
+          "size": 1,
+          "id": 389149,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:389149"
+        },
+        {
+          "label": "Neutro",
+          "size": 1,
+          "id": 392122,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:392122"
+        },
+        {
+          "label": "Pimenta chilli",
+          "size": 1,
+          "id": 420170,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:420170"
+        },
+        {
+          "label": "Pomodoro e spinaci",
+          "size": 1,
+          "id": 438632,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:438632"
+        },
+        {
+          "label": "Páprica",
+          "size": 1,
+          "id": 389188,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:389188"
+        },
+        {
+          "label": "Queijo",
+          "size": 1,
+          "id": 389042,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:389042"
+        },
+        {
+          "label": "Queijo e cebola",
+          "size": 1,
+          "id": 389206,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:389206"
+        },
+        {
+          "label": "Quinoa e linhaça",
+          "size": 1,
+          "id": 392069,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:392069"
+        },
+        {
+          "label": "Tomate suave",
+          "size": 1,
+          "id": 391592,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:391592"
+        },
+        {
+          "label": "Vagem",
+          "size": 1,
+          "id": 389112,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:9137:389112"
+        }
+      ]
+    },
+    {
+      "id": 394717,
+      "attribute": "Avaliação",
+      "type": "discrete",
+      "fType": 4,
+      "values": [
+        {
+          "label": "00",
+          "size": 892,
+          "id": 394718,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:394717:394718"
+        }
+      ]
+    },
+    {
+      "id": 3746,
+      "attribute": "Department",
+      "type": "discrete",
+      "values": [
+        {
+          "label": "Whatsapp",
+          "size": 351,
+          "id": 401443,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3746:401443"
+        },
+        {
+          "label": "Cp",
+          "size": 14,
+          "id": 3747,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3746:3747"
+        },
+        {
+          "label": "Cheftime",
+          "size": 10,
+          "id": 113419,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3746:113419"
+        },
+        {
+          "label": "Scango",
+          "size": 4,
+          "id": 6140,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3746:6140"
+        }
+      ]
+    },
+    {
+      "id": 3720,
+      "attribute": "Ean1",
+      "type": "discrete",
+      "values": [
+        {
+          "label": "7891000116579",
+          "size": 2,
+          "id": 66098,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:66098"
+        },
+        {
+          "label": "7891000116616",
+          "size": 2,
+          "id": 13455,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:13455"
+        },
+        {
+          "label": "7891000350560",
+          "size": 2,
+          "id": 248305,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:248305"
+        },
+        {
+          "label": "7896502840175",
+          "size": 2,
+          "id": 176825,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:176825"
+        },
+        {
+          "label": "0000000001403",
+          "size": 1,
+          "id": 168130,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:168130"
+        },
+        {
+          "label": "0000000023597",
+          "size": 1,
+          "id": 168206,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:168206"
+        },
+        {
+          "label": "0000000023627",
+          "size": 1,
+          "id": 402351,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:402351"
+        },
+        {
+          "label": "0000000033862",
+          "size": 1,
+          "id": 168308,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:168308"
+        },
+        {
+          "label": "0000000034555",
+          "size": 1,
+          "id": 168321,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:168321"
+        },
+        {
+          "label": "0000000041263",
+          "size": 1,
+          "id": 168360,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:168360"
+        },
+        {
+          "label": "0000000041607",
+          "size": 1,
+          "id": 168315,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:168315"
+        },
+        {
+          "label": "0000000041843",
+          "size": 1,
+          "id": 168390,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:168390"
+        },
+        {
+          "label": "0000000041850",
+          "size": 1,
+          "id": 168370,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:168370"
+        },
+        {
+          "label": "0000000049184",
+          "size": 1,
+          "id": 168483,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:168483"
+        },
+        {
+          "label": "0000000050234",
+          "size": 1,
+          "id": 168437,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:168437"
+        },
+        {
+          "label": "0000000055239",
+          "size": 1,
+          "id": 168443,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:168443"
+        },
+        {
+          "label": "0000000055369",
+          "size": 1,
+          "id": 168531,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:168531"
+        },
+        {
+          "label": "0000000056243",
+          "size": 1,
+          "id": 168449,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:168449"
+        },
+        {
+          "label": "0000000068802",
+          "size": 1,
+          "id": 168630,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:168630"
+        },
+        {
+          "label": "0000000069069",
+          "size": 1,
+          "id": 168592,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:168592"
+        },
+        {
+          "label": "0000000073493",
+          "size": 1,
+          "id": 339002,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:339002"
+        },
+        {
+          "label": "0000000098854",
+          "size": 1,
+          "id": 349613,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:349613"
+        },
+        {
+          "label": "0000000109482",
+          "size": 1,
+          "id": 298896,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:298896"
+        },
+        {
+          "label": "0000000109512",
+          "size": 1,
+          "id": 168705,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:168705"
+        },
+        {
+          "label": "0000000268523",
+          "size": 1,
+          "id": 419225,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:419225"
+        },
+        {
+          "label": "0000000268875",
+          "size": 1,
+          "id": 402362,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:402362"
+        },
+        {
+          "label": "0000000269032",
+          "size": 1,
+          "id": 169553,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:169553"
+        },
+        {
+          "label": "0000000312110",
+          "size": 1,
+          "id": 234877,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:234877"
+        },
+        {
+          "label": "0000000337748",
+          "size": 1,
+          "id": 169985,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:169985"
+        },
+        {
+          "label": "0000000362481",
+          "size": 1,
+          "id": 417235,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:417235"
+        },
+        {
+          "label": "0000000438018",
+          "size": 1,
+          "id": 169935,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:169935"
+        },
+        {
+          "label": "0000000439800",
+          "size": 1,
+          "id": 169941,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:169941"
+        },
+        {
+          "label": "0000000763431",
+          "size": 1,
+          "id": 462682,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:462682"
+        },
+        {
+          "label": "0000000767156",
+          "size": 1,
+          "id": 480577,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:480577"
+        },
+        {
+          "label": "0000000767941",
+          "size": 1,
+          "id": 487078,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:487078"
+        },
+        {
+          "label": "0000000769815",
+          "size": 1,
+          "id": 500474,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:500474"
+        },
+        {
+          "label": "0000001395341",
+          "size": 1,
+          "id": 178502,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:178502"
+        },
+        {
+          "label": "0000001395372",
+          "size": 1,
+          "id": 178910,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:178910"
+        },
+        {
+          "label": "0000001446456",
+          "size": 1,
+          "id": 180474,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:180474"
+        },
+        {
+          "label": "0000001446470",
+          "size": 1,
+          "id": 180010,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:180010"
+        },
+        {
+          "label": "0000001446524",
+          "size": 1,
+          "id": 420349,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:420349"
+        },
+        {
+          "label": "0000001446548",
+          "size": 1,
+          "id": 237564,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:237564"
+        },
+        {
+          "label": "0000001446555",
+          "size": 1,
+          "id": 178554,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:178554"
+        },
+        {
+          "label": "0000001446579",
+          "size": 1,
+          "id": 178962,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:178962"
+        },
+        {
+          "label": "0000005979721",
+          "size": 1,
+          "id": 261978,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:261978"
+        },
+        {
+          "label": "0000007694615",
+          "size": 1,
+          "id": 181893,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:181893"
+        },
+        {
+          "label": "0000007694639",
+          "size": 1,
+          "id": 182653,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:182653"
+        },
+        {
+          "label": "0000007694646",
+          "size": 1,
+          "id": 191055,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:191055"
+        },
+        {
+          "label": "0000007694653",
+          "size": 1,
+          "id": 183253,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:183253"
+        },
+        {
+          "label": "0000007757358",
+          "size": 1,
+          "id": 181982,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3720:181982"
+        }
+      ]
+    },
+    {
+      "id": 6222,
+      "attribute": "Faixa etária",
+      "type": "discrete",
+      "values": [
+        {
+          "label": "A partir do 6º mês",
+          "size": 1,
+          "id": 6223,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:6222:6223"
+        }
+      ]
+    },
+    {
+      "id": 3716,
+      "attribute": "Search",
+      "type": "discrete",
+      "values": [
+        {
+          "label": "All",
+          "size": 892,
+          "id": 3717,
+          "applyLink": "/engage/search/v3/search?apikey=paodeacucar&resultsperpage=5&terms=arroz&filter=d:3716:3717"
+        }
+      ]
+    }
+  ],
+  "size": 892,
+  "pagination": {
+    "first": "/engage/search/v3/search?apikey=paodeacucar&page=1&resultsperpage=5&terms=arroz",
+    "last": "/engage/search/v3/search?apikey=paodeacucar&page=179&resultsperpage=5&terms=arroz",
+    "next": "/engage/search/v3/search?apikey=paodeacucar&page=2&resultsperpage=5&terms=arroz"
+  },
+  "products": [
+    {
+      "id": "0154093",
+      "collectInfo": { "productId": "0154093", "skuList": [] },
+      "clickUrl": "/engage/search/v3/clicks?apikey=paodeacucar&trackingId=eyJzZWFyY2hJZCI6ImFkZmRkOGQzLTViOWMtNGNjOS05MzQ1LWJiMDU2OTg3N2NiMCIsIm9yaWdpbiI6InNlYXJjaCIsInByb2R1Y3QiOnsicmFua2luZyI6MSwicGlkIjoiMDE1NDA5MyIsInNrdXMiOltdfX0%3D",
+      "name": "Arroz Agulhinha Tipo 1 TIO JOÃO Pacote 1kg",
+      "price": 7.29,
+      "oldPrice": 7.29,
+      "url": "https://www.paodeacucar.com/produto/31117",
+      "images": {
+        "default": "www.paodeacucar.com//img/uploads/1/893/612893x200x200.png"
+      },
+      "installment": [],
+      "status": "AVAILABLE",
+      "categories": [
+        { "id": "Alimentos", "name": "Alimentos", "parents": [] },
+        { "id": "Arroz", "name": "Arroz", "parents": ["Grãos e Cereais"] },
+        {
+          "id": "Básico da despensa",
+          "name": "Básico da despensa",
+          "parents": ["Alimentos"]
+        },
+        {
+          "id": "Grãos e Cereais",
+          "name": "Grãos e Cereais",
+          "parents": ["Básico da despensa"]
+        }
+      ],
+      "tags": [{ "id": "1p", "name": "1P", "parents": null }],
+      "created": "2022-12-02 14:18:51",
+      "brand": null,
+      "selectedSku": "0154093",
+      "cId": "Arroz",
+      "iId": 1666,
+      "skus": [
+        {
+          "sku": "0154093",
+          "specs": { "rdate": ["1659063600.0"], "salesChannel": ["default"] },
+          "properties": {
+            "status": "AVAILABLE",
+            "price": 7.29,
+            "oldPrice": 7.29,
+            "images": {
+              "default": "www.paodeacucar.com//img/uploads/1/893/612893x200x200.png"
+            },
+            "tags": [{ "id": "1p", "name": "1P", "parents": [] }],
+            "created": "2022-07-29 18:10:59",
+            "brand": null,
+            "details": {
+              "search": "ALL",
+              "isExclusiveDepartment": false,
+              "sellTypes": "1P",
+              "EAN1": "7893500020110"
+            },
+            "url": "https://www.paodeacucar.com/produto/31117"
+          }
+        }
+      ],
+      "details": {
+        "search": ["ALL"],
+        "isExclusiveDepartment": ["False"],
+        "sellTypes": ["1P"],
+        "EAN1": ["7893500020110"],
+        "salesChannel": [
+          "10",
+          "101",
+          "102",
+          "1021",
+          "1041",
+          "1042",
+          "1061",
+          "1081",
+          "1101",
+          "1102",
+          "1121",
+          "1122",
+          "1141",
+          "1161",
+          "1181",
+          "1201",
+          "1202",
+          "1203",
+          "1204",
+          "121",
+          "122",
+          "1224",
+          "1264",
+          "1265",
+          "1266",
+          "1304",
+          "1324",
+          "1325",
+          "1344",
+          "1364",
+          "1384",
+          "141",
+          "1444",
+          "1464",
+          "1484",
+          "1485",
+          "1504",
+          "1524",
+          "1525",
+          "1526",
+          "1527",
+          "1528",
+          "1529",
+          "1530",
+          "1549",
+          "1569",
+          "1589",
+          "1590",
+          "1609",
+          "1649",
+          "1689",
+          "1729",
+          "1769",
+          "1789",
+          "1790",
+          "1791",
+          "1792",
+          "1793",
+          "1794",
+          "1796",
+          "1798",
+          "1801",
+          "1802",
+          "1803",
+          "1804",
+          "1805",
+          "1806",
+          "1807",
+          "1808",
+          "1809",
+          "181",
+          "1829",
+          "1830",
+          "1831",
+          "1832",
+          "1833",
+          "1834",
+          "1835",
+          "1849",
+          "1850",
+          "1851",
+          "1852",
+          "1869",
+          "1870",
+          "1871",
+          "1889",
+          "1890",
+          "1891",
+          "1892",
+          "1893",
+          "1894",
+          "1895",
+          "1896",
+          "1897",
+          "1898",
+          "1899",
+          "1901",
+          "1909",
+          "1910",
+          "1911",
+          "1912",
+          "1913",
+          "1914",
+          "1919",
+          "1920",
+          "1921",
+          "1922",
+          "1923",
+          "1924",
+          "1925",
+          "1926",
+          "1929",
+          "1949",
+          "1950",
+          "1969",
+          "1970",
+          "1971",
+          "1972",
+          "1973",
+          "1989",
+          "2",
+          "201",
+          "2089",
+          "21",
+          "2109",
+          "2129",
+          "2149",
+          "2169",
+          "2170",
+          "22",
+          "221",
+          "2210",
+          "2211",
+          "2231",
+          "2232",
+          "2251",
+          "2252",
+          "2253",
+          "2271",
+          "2272",
+          "2273",
+          "2274",
+          "2291",
+          "2292",
+          "2293",
+          "23",
+          "2311",
+          "2331",
+          "2332",
+          "2351",
+          "2352",
+          "2353",
+          "2354",
+          "2371",
+          "2372",
+          "2393",
+          "2394",
+          "2395",
+          "2396",
+          "2397",
+          "2398",
+          "2399",
+          "24",
+          "2400",
+          "2401",
+          "2402",
+          "2403",
+          "2404",
+          "2405",
+          "2406",
+          "241",
+          "2411",
+          "2412",
+          "2431",
+          "2451",
+          "2452",
+          "2453",
+          "2454",
+          "2455",
+          "2471",
+          "2473",
+          "2474",
+          "2476",
+          "2477",
+          "2478",
+          "2479",
+          "2480",
+          "2482",
+          "2483",
+          "2484",
+          "2485",
+          "2486",
+          "2487",
+          "2488",
+          "2489",
+          "2490",
+          "2491",
+          "2492",
+          "25",
+          "2513",
+          "2553",
+          "26",
+          "261",
+          "361",
+          "4",
+          "41",
+          "461",
+          "481",
+          "5",
+          "501",
+          "521",
+          "541",
+          "561",
+          "601",
+          "61",
+          "62",
+          "621",
+          "622",
+          "63",
+          "641",
+          "661",
+          "681",
+          "701",
+          "721",
+          "722",
+          "741",
+          "761",
+          "781",
+          "801",
+          "81",
+          "821",
+          "841",
+          "842",
+          "861",
+          "881",
+          "9",
+          "901",
+          "921",
+          "941",
+          "961",
+          "981",
+          "default"
+        ],
+        "categoryName": ["Arroz"]
+      }
+    },
+    {
+      "id": "0300438",
+      "collectInfo": { "productId": "0300438", "skuList": [] },
+      "clickUrl": "/engage/search/v3/clicks?apikey=paodeacucar&trackingId=eyJzZWFyY2hJZCI6ImFkZmRkOGQzLTViOWMtNGNjOS05MzQ1LWJiMDU2OTg3N2NiMCIsIm9yaWdpbiI6InNlYXJjaCIsInByb2R1Y3QiOnsicmFua2luZyI6MiwicGlkIjoiMDMwMDQzOCIsInNrdXMiOltdfX0%3D",
+      "name": "Arroz Agulhinha Tipo 1 CAMIL Pacote 1kg",
+      "price": 6.89,
+      "oldPrice": 6.89,
+      "url": "https://www.paodeacucar.com/produto/99080",
+      "images": {
+        "default": "www.paodeacucar.com//img/uploads/1/771/529771x200x200.jpg"
+      },
+      "installment": [],
+      "status": "AVAILABLE",
+      "categories": [
+        { "id": "Alimentos", "name": "Alimentos", "parents": [] },
+        { "id": "Arroz", "name": "Arroz", "parents": ["Grãos e Cereais"] },
+        {
+          "id": "Básico da despensa",
+          "name": "Básico da despensa",
+          "parents": ["Alimentos"]
+        },
+        {
+          "id": "Grãos e Cereais",
+          "name": "Grãos e Cereais",
+          "parents": ["Básico da despensa"]
+        }
+      ],
+      "tags": [{ "id": "1p", "name": "1P", "parents": null }],
+      "created": "2023-04-03 22:13:28",
+      "brand": null,
+      "selectedSku": "0300438",
+      "cId": "Arroz",
+      "iId": 3448,
+      "skus": [
+        {
+          "sku": "0300438",
+          "specs": { "rdate": ["1659063600.0"], "salesChannel": ["default"] },
+          "properties": {
+            "status": "AVAILABLE",
+            "price": 6.89,
+            "oldPrice": 6.89,
+            "images": {
+              "default": "www.paodeacucar.com//img/uploads/1/771/529771x200x200.jpg"
+            },
+            "tags": [{ "id": "1p", "name": "1P", "parents": [] }],
+            "created": "2022-07-29 18:06:50",
+            "brand": null,
+            "details": {
+              "search": "ALL",
+              "isExclusiveDepartment": false,
+              "sellTypes": "1P",
+              "EAN1": "7896006711117"
+            },
+            "url": "https://www.paodeacucar.com/produto/99080"
+          }
+        }
+      ],
+      "details": {
+        "search": ["ALL"],
+        "isExclusiveDepartment": ["False"],
+        "sellTypes": ["1P"],
+        "EAN1": ["7896006711117"],
+        "salesChannel": [
+          "10",
+          "101",
+          "102",
+          "1021",
+          "1041",
+          "1042",
+          "1061",
+          "1081",
+          "1101",
+          "1102",
+          "1121",
+          "1122",
+          "1141",
+          "1161",
+          "1181",
+          "1201",
+          "1202",
+          "1203",
+          "1204",
+          "121",
+          "122",
+          "1224",
+          "1264",
+          "1265",
+          "1266",
+          "1304",
+          "1324",
+          "1325",
+          "1344",
+          "1364",
+          "1384",
+          "141",
+          "1444",
+          "1464",
+          "1484",
+          "1485",
+          "1504",
+          "1524",
+          "1525",
+          "1526",
+          "1527",
+          "1528",
+          "1529",
+          "1530",
+          "1549",
+          "1569",
+          "1589",
+          "1590",
+          "1609",
+          "1649",
+          "1689",
+          "1729",
+          "1769",
+          "1789",
+          "1790",
+          "1791",
+          "1792",
+          "1793",
+          "1794",
+          "1796",
+          "1797",
+          "1798",
+          "1801",
+          "1802",
+          "1803",
+          "1804",
+          "1805",
+          "1806",
+          "1807",
+          "1808",
+          "1809",
+          "181",
+          "1829",
+          "1830",
+          "1831",
+          "1832",
+          "1833",
+          "1834",
+          "1835",
+          "1849",
+          "1850",
+          "1851",
+          "1852",
+          "1869",
+          "1870",
+          "1871",
+          "1889",
+          "1890",
+          "1891",
+          "1893",
+          "1894",
+          "1895",
+          "1896",
+          "1897",
+          "1898",
+          "1899",
+          "1901",
+          "1909",
+          "1910",
+          "1911",
+          "1912",
+          "1913",
+          "1914",
+          "1919",
+          "1920",
+          "1921",
+          "1922",
+          "1923",
+          "1924",
+          "1925",
+          "1926",
+          "1949",
+          "1950",
+          "1969",
+          "1970",
+          "1971",
+          "1972",
+          "1973",
+          "1989",
+          "2",
+          "201",
+          "2089",
+          "21",
+          "2109",
+          "2129",
+          "2149",
+          "2169",
+          "2170",
+          "22",
+          "221",
+          "2210",
+          "2211",
+          "2231",
+          "2232",
+          "2251",
+          "2252",
+          "2253",
+          "2271",
+          "2272",
+          "2273",
+          "2274",
+          "2291",
+          "2292",
+          "2293",
+          "23",
+          "2311",
+          "2331",
+          "2332",
+          "2351",
+          "2352",
+          "2353",
+          "2354",
+          "2371",
+          "2372",
+          "2393",
+          "2394",
+          "2395",
+          "2396",
+          "2397",
+          "2398",
+          "2399",
+          "24",
+          "2400",
+          "2401",
+          "2402",
+          "2403",
+          "2404",
+          "2405",
+          "2406",
+          "241",
+          "2411",
+          "2412",
+          "2431",
+          "2451",
+          "2452",
+          "2453",
+          "2454",
+          "2455",
+          "2471",
+          "2473",
+          "2474",
+          "2476",
+          "2477",
+          "2478",
+          "2479",
+          "2480",
+          "2482",
+          "2483",
+          "2484",
+          "2485",
+          "2486",
+          "2487",
+          "2488",
+          "2489",
+          "2490",
+          "2491",
+          "2492",
+          "25",
+          "2513",
+          "2553",
+          "26",
+          "261",
+          "361",
+          "4",
+          "41",
+          "461",
+          "481",
+          "5",
+          "501",
+          "521",
+          "541",
+          "561",
+          "601",
+          "61",
+          "62",
+          "621",
+          "622",
+          "63",
+          "641",
+          "661",
+          "681",
+          "701",
+          "721",
+          "722",
+          "741",
+          "761",
+          "781",
+          "801",
+          "81",
+          "821",
+          "841",
+          "842",
+          "861",
+          "881",
+          "9",
+          "901",
+          "921",
+          "941",
+          "961",
+          "981",
+          "default"
+        ],
+        "categoryName": ["Arroz"]
+      }
+    },
+    {
+      "id": "0791595",
+      "collectInfo": { "productId": "0791595", "skuList": [] },
+      "clickUrl": "/engage/search/v3/clicks?apikey=paodeacucar&trackingId=eyJzZWFyY2hJZCI6ImFkZmRkOGQzLTViOWMtNGNjOS05MzQ1LWJiMDU2OTg3N2NiMCIsIm9yaWdpbiI6InNlYXJjaCIsInByb2R1Y3QiOnsicmFua2luZyI6MywicGlkIjoiMDc5MTU5NSIsInNrdXMiOltdfX0%3D",
+      "name": "Arroz Agulhinha Tipo 1 CAMIL Pacote 5kg",
+      "price": 27.99,
+      "oldPrice": 27.99,
+      "url": "https://www.paodeacucar.com/produto/41329",
+      "images": {
+        "default": "www.paodeacucar.com//img/uploads/1/779/529779x200x200.jpg"
+      },
+      "installment": [],
+      "status": "AVAILABLE",
+      "categories": [
+        { "id": "Alimentos", "name": "Alimentos", "parents": [] },
+        { "id": "Arroz", "name": "Arroz", "parents": ["Grãos e Cereais"] },
+        {
+          "id": "Básico da despensa",
+          "name": "Básico da despensa",
+          "parents": ["Alimentos"]
+        },
+        {
+          "id": "Grãos e Cereais",
+          "name": "Grãos e Cereais",
+          "parents": ["Básico da despensa"]
+        }
+      ],
+      "tags": [{ "id": "1p", "name": "1P", "parents": null }],
+      "created": "2022-12-02 14:19:39",
+      "brand": null,
+      "selectedSku": "0791595",
+      "cId": "Arroz",
+      "iId": 5329,
+      "skus": [
+        {
+          "sku": "0791595",
+          "specs": { "rdate": ["1659063600.0"], "salesChannel": ["default"] },
+          "properties": {
+            "status": "AVAILABLE",
+            "price": 27.99,
+            "oldPrice": 27.99,
+            "images": {
+              "default": "www.paodeacucar.com//img/uploads/1/779/529779x200x200.jpg"
+            },
+            "tags": [{ "id": "1p", "name": "1P", "parents": [] }],
+            "created": "2022-07-29 18:04:24",
+            "brand": null,
+            "details": {
+              "search": "ALL",
+              "isExclusiveDepartment": false,
+              "sellTypes": "1P",
+              "EAN1": "7896006711155"
+            },
+            "url": "https://www.paodeacucar.com/produto/41329"
+          }
+        }
+      ],
+      "details": {
+        "search": ["ALL"],
+        "isExclusiveDepartment": ["False"],
+        "sellTypes": ["1P"],
+        "EAN1": ["7896006711155"],
+        "salesChannel": [
+          "10",
+          "101",
+          "102",
+          "1041",
+          "1042",
+          "1061",
+          "1081",
+          "1141",
+          "1161",
+          "1181",
+          "1201",
+          "1202",
+          "1203",
+          "121",
+          "122",
+          "1224",
+          "1264",
+          "1265",
+          "1266",
+          "1304",
+          "1324",
+          "1325",
+          "1344",
+          "1364",
+          "1384",
+          "141",
+          "1444",
+          "1484",
+          "1485",
+          "1504",
+          "1524",
+          "1525",
+          "1526",
+          "1527",
+          "1528",
+          "1529",
+          "1530",
+          "1549",
+          "1569",
+          "1589",
+          "1590",
+          "1609",
+          "1689",
+          "1729",
+          "1769",
+          "1791",
+          "1792",
+          "1801",
+          "1802",
+          "1803",
+          "1804",
+          "1805",
+          "1806",
+          "1808",
+          "1809",
+          "181",
+          "1829",
+          "1830",
+          "1831",
+          "1832",
+          "1833",
+          "1834",
+          "1849",
+          "1850",
+          "1851",
+          "1852",
+          "1869",
+          "1870",
+          "1871",
+          "1889",
+          "1890",
+          "1891",
+          "1892",
+          "1894",
+          "1895",
+          "1898",
+          "1899",
+          "1901",
+          "1910",
+          "1912",
+          "1913",
+          "1914",
+          "1919",
+          "1920",
+          "1922",
+          "1923",
+          "1924",
+          "1925",
+          "1926",
+          "1929",
+          "1949",
+          "1950",
+          "1969",
+          "1970",
+          "1971",
+          "1972",
+          "1989",
+          "201",
+          "2089",
+          "21",
+          "2109",
+          "2129",
+          "2149",
+          "2169",
+          "2170",
+          "22",
+          "221",
+          "2211",
+          "2231",
+          "2251",
+          "2252",
+          "2271",
+          "2272",
+          "2273",
+          "2274",
+          "2291",
+          "2292",
+          "2293",
+          "23",
+          "2311",
+          "2331",
+          "2332",
+          "2351",
+          "2352",
+          "2353",
+          "2354",
+          "2371",
+          "2372",
+          "2393",
+          "2394",
+          "2395",
+          "2396",
+          "2397",
+          "2398",
+          "2399",
+          "24",
+          "2400",
+          "2401",
+          "2402",
+          "241",
+          "2411",
+          "2412",
+          "2431",
+          "2451",
+          "2452",
+          "2453",
+          "2454",
+          "2455",
+          "2471",
+          "2473",
+          "2474",
+          "2476",
+          "2477",
+          "2478",
+          "2479",
+          "2480",
+          "2482",
+          "2483",
+          "2484",
+          "2485",
+          "2486",
+          "2487",
+          "2488",
+          "2489",
+          "2490",
+          "2491",
+          "2492",
+          "25",
+          "2513",
+          "2553",
+          "26",
+          "261",
+          "361",
+          "4",
+          "41",
+          "461",
+          "481",
+          "5",
+          "541",
+          "561",
+          "601",
+          "61",
+          "62",
+          "621",
+          "63",
+          "641",
+          "681",
+          "701",
+          "721",
+          "722",
+          "741",
+          "761",
+          "781",
+          "801",
+          "81",
+          "821",
+          "841",
+          "842",
+          "861",
+          "881",
+          "9",
+          "901",
+          "921",
+          "941",
+          "961",
+          "981",
+          "default"
+        ],
+        "categoryName": ["Arroz"]
+      }
+    },
+    {
+      "id": "0357852",
+      "collectInfo": { "productId": "0357852", "skuList": [] },
+      "clickUrl": "/engage/search/v3/clicks?apikey=paodeacucar&trackingId=eyJzZWFyY2hJZCI6ImFkZmRkOGQzLTViOWMtNGNjOS05MzQ1LWJiMDU2OTg3N2NiMCIsIm9yaWdpbiI6InNlYXJjaCIsInByb2R1Y3QiOnsicmFua2luZyI6NCwicGlkIjoiMDM1Nzg1MiIsInNrdXMiOltdfX0%3D",
+      "name": "Arroz Agulhinha Longo Fino Tipo 1 TIO JOÃO Pacote 2kg",
+      "price": 14.49,
+      "oldPrice": 14.49,
+      "url": "https://www.paodeacucar.com/produto/168429",
+      "images": {
+        "default": "www.paodeacucar.com//img/uploads/1/955/6522955x200x200.jpeg"
+      },
+      "installment": [],
+      "status": "AVAILABLE",
+      "categories": [
+        { "id": "Alimentos", "name": "Alimentos", "parents": [] },
+        { "id": "Arroz", "name": "Arroz", "parents": ["Grãos e Cereais"] },
+        {
+          "id": "Básico da despensa",
+          "name": "Básico da despensa",
+          "parents": ["Alimentos"]
+        },
+        {
+          "id": "Grãos e Cereais",
+          "name": "Grãos e Cereais",
+          "parents": ["Básico da despensa"]
+        }
+      ],
+      "tags": [{ "id": "1p", "name": "1P", "parents": null }],
+      "created": "2022-12-02 14:19:29",
+      "brand": null,
+      "selectedSku": "0357852",
+      "cId": "Arroz",
+      "iId": 4098,
+      "skus": [
+        {
+          "sku": "0357852",
+          "specs": {
+            "department": ["whatsapp"],
+            "rdate": ["1659063600.0"],
+            "salesChannel": ["default"]
+          },
+          "properties": {
+            "status": "AVAILABLE",
+            "price": 14.49,
+            "oldPrice": 14.49,
+            "images": {
+              "default": "www.paodeacucar.com//img/uploads/1/955/6522955x200x200.jpeg"
+            },
+            "tags": [{ "id": "1p", "name": "1P", "parents": [] }],
+            "created": "2022-07-29 17:58:49",
+            "brand": null,
+            "details": {
+              "search": "ALL",
+              "isExclusiveDepartment": false,
+              "department": ["whatsapp"],
+              "sellTypes": "1P",
+              "EAN1": "7893500020134"
+            },
+            "extra": { "all": { "department": ["whatsapp"] } },
+            "url": "https://www.paodeacucar.com/produto/168429"
+          }
+        }
+      ],
+      "details": {
+        "search": ["ALL"],
+        "isExclusiveDepartment": ["False"],
+        "sellTypes": ["1P"],
+        "EAN1": ["7893500020134"],
+        "salesChannel": [
+          "10",
+          "101",
+          "102",
+          "1041",
+          "1042",
+          "1061",
+          "1081",
+          "1141",
+          "1161",
+          "1181",
+          "1201",
+          "1202",
+          "1203",
+          "121",
+          "122",
+          "1224",
+          "1264",
+          "1265",
+          "1266",
+          "1304",
+          "1324",
+          "1325",
+          "1344",
+          "1364",
+          "1384",
+          "141",
+          "1444",
+          "1484",
+          "1485",
+          "1504",
+          "1524",
+          "1525",
+          "1526",
+          "1527",
+          "1528",
+          "1529",
+          "1530",
+          "1549",
+          "1569",
+          "1589",
+          "1590",
+          "1609",
+          "1689",
+          "1769",
+          "1791",
+          "1792",
+          "1798",
+          "1801",
+          "1802",
+          "1803",
+          "1804",
+          "1805",
+          "1806",
+          "1808",
+          "1809",
+          "181",
+          "1829",
+          "1830",
+          "1831",
+          "1832",
+          "1833",
+          "1834",
+          "1835",
+          "1849",
+          "1850",
+          "1851",
+          "1852",
+          "1869",
+          "1870",
+          "1871",
+          "1889",
+          "1890",
+          "1891",
+          "1894",
+          "1895",
+          "1898",
+          "1899",
+          "1901",
+          "1910",
+          "1912",
+          "1913",
+          "1914",
+          "1919",
+          "1920",
+          "1922",
+          "1923",
+          "1924",
+          "1925",
+          "1926",
+          "1949",
+          "1950",
+          "1969",
+          "1970",
+          "1971",
+          "1972",
+          "1989",
+          "201",
+          "21",
+          "2109",
+          "22",
+          "221",
+          "2231",
+          "2251",
+          "2252",
+          "2271",
+          "2272",
+          "2273",
+          "2274",
+          "2291",
+          "2292",
+          "2293",
+          "23",
+          "2311",
+          "2331",
+          "2332",
+          "2351",
+          "2352",
+          "2353",
+          "2354",
+          "2371",
+          "2372",
+          "24",
+          "241",
+          "2411",
+          "2412",
+          "2431",
+          "2491",
+          "2492",
+          "25",
+          "26",
+          "261",
+          "361",
+          "4",
+          "41",
+          "461",
+          "481",
+          "5",
+          "501",
+          "541",
+          "561",
+          "601",
+          "61",
+          "62",
+          "621",
+          "63",
+          "641",
+          "681",
+          "701",
+          "721",
+          "722",
+          "741",
+          "761",
+          "781",
+          "801",
+          "81",
+          "821",
+          "841",
+          "842",
+          "861",
+          "881",
+          "9",
+          "901",
+          "921",
+          "941",
+          "961",
+          "981",
+          "default"
+        ],
+        "categoryName": ["Arroz"]
+      }
+    },
+    {
+      "id": "6009229",
+      "collectInfo": { "productId": "6009229", "skuList": [] },
+      "clickUrl": "/engage/search/v3/clicks?apikey=paodeacucar&trackingId=eyJzZWFyY2hJZCI6ImFkZmRkOGQzLTViOWMtNGNjOS05MzQ1LWJiMDU2OTg3N2NiMCIsIm9yaWdpbiI6InNlYXJjaCIsInByb2R1Y3QiOnsicmFua2luZyI6NSwicGlkIjoiNjAwOTIyOSIsInNrdXMiOltdfX0%3D",
+      "name": "Arroz Agulhinha Tipo 1 QUALITÁ Pacote 1kg",
+      "price": 5.79,
+      "oldPrice": 5.79,
+      "url": "https://www.paodeacucar.com/produto/102639",
+      "images": {
+        "default": "www.paodeacucar.com//img/uploads/1/822/633822x200x200.png"
+      },
+      "installment": [],
+      "status": "AVAILABLE",
+      "categories": [
+        { "id": "Alimentos", "name": "Alimentos", "parents": [] },
+        { "id": "Arroz", "name": "Arroz", "parents": ["Grãos e Cereais"] },
+        {
+          "id": "Básico da despensa",
+          "name": "Básico da despensa",
+          "parents": ["Alimentos"]
+        },
+        {
+          "id": "Grãos e Cereais",
+          "name": "Grãos e Cereais",
+          "parents": ["Básico da despensa"]
+        }
+      ],
+      "tags": [{ "id": "1p", "name": "1P", "parents": null }],
+      "created": "2022-12-02 14:33:34",
+      "brand": null,
+      "selectedSku": "6009229",
+      "cId": "Arroz",
+      "iId": 94545,
+      "skus": [
+        {
+          "sku": "6009229",
+          "specs": { "rdate": ["1659063600.0"], "salesChannel": ["default"] },
+          "properties": {
+            "status": "AVAILABLE",
+            "price": 5.79,
+            "oldPrice": 5.79,
+            "images": {
+              "default": "www.paodeacucar.com//img/uploads/1/822/633822x200x200.png"
+            },
+            "tags": [{ "id": "1p", "name": "1P", "parents": [] }],
+            "created": "2022-07-29 21:10:31",
+            "brand": null,
+            "details": {
+              "search": "ALL",
+              "isExclusiveDepartment": false,
+              "sellTypes": "1P",
+              "EAN1": "7895000318629"
+            },
+            "url": "https://www.paodeacucar.com/produto/102639"
+          }
+        }
+      ],
+      "details": {
+        "search": ["ALL"],
+        "isExclusiveDepartment": ["False"],
+        "sellTypes": ["1P"],
+        "EAN1": ["7895000318629"],
+        "salesChannel": [
+          "10",
+          "101",
+          "102",
+          "1021",
+          "1041",
+          "1042",
+          "1061",
+          "1081",
+          "1101",
+          "1102",
+          "1121",
+          "1122",
+          "1141",
+          "1161",
+          "1181",
+          "1201",
+          "1202",
+          "1203",
+          "1204",
+          "121",
+          "122",
+          "1224",
+          "1264",
+          "1265",
+          "1266",
+          "1304",
+          "1324",
+          "1325",
+          "1344",
+          "1364",
+          "1384",
+          "141",
+          "1444",
+          "1464",
+          "1484",
+          "1485",
+          "1504",
+          "1524",
+          "1525",
+          "1526",
+          "1527",
+          "1528",
+          "1529",
+          "1530",
+          "1549",
+          "1569",
+          "1589",
+          "1590",
+          "1609",
+          "1649",
+          "1689",
+          "1729",
+          "1769",
+          "1789",
+          "1790",
+          "1791",
+          "1792",
+          "1793",
+          "1794",
+          "1796",
+          "1797",
+          "1798",
+          "1801",
+          "1802",
+          "1803",
+          "1804",
+          "1805",
+          "1806",
+          "1807",
+          "1808",
+          "1809",
+          "181",
+          "1829",
+          "1830",
+          "1831",
+          "1832",
+          "1833",
+          "1834",
+          "1835",
+          "1849",
+          "1850",
+          "1851",
+          "1852",
+          "1869",
+          "1870",
+          "1871",
+          "1889",
+          "1890",
+          "1891",
+          "1892",
+          "1893",
+          "1894",
+          "1895",
+          "1896",
+          "1897",
+          "1898",
+          "1899",
+          "1901",
+          "1909",
+          "1910",
+          "1911",
+          "1912",
+          "1913",
+          "1914",
+          "1919",
+          "1920",
+          "1921",
+          "1922",
+          "1923",
+          "1924",
+          "1925",
+          "1926",
+          "1929",
+          "1949",
+          "1950",
+          "1969",
+          "1970",
+          "1971",
+          "1972",
+          "1973",
+          "1989",
+          "2",
+          "201",
+          "2089",
+          "21",
+          "2109",
+          "2129",
+          "2149",
+          "2169",
+          "2170",
+          "22",
+          "221",
+          "2210",
+          "2211",
+          "2231",
+          "2232",
+          "2251",
+          "2252",
+          "2253",
+          "2271",
+          "2272",
+          "2273",
+          "2274",
+          "2291",
+          "2292",
+          "2293",
+          "23",
+          "2311",
+          "2331",
+          "2332",
+          "2351",
+          "2352",
+          "2353",
+          "2354",
+          "2371",
+          "2372",
+          "2393",
+          "2394",
+          "2395",
+          "2396",
+          "2397",
+          "2398",
+          "2399",
+          "24",
+          "2400",
+          "2401",
+          "2402",
+          "2403",
+          "2404",
+          "2405",
+          "2406",
+          "241",
+          "2411",
+          "2412",
+          "2451",
+          "2452",
+          "2453",
+          "2454",
+          "2455",
+          "2471",
+          "2473",
+          "2474",
+          "2476",
+          "2477",
+          "2478",
+          "2479",
+          "2480",
+          "2482",
+          "2483",
+          "2484",
+          "2485",
+          "2486",
+          "2487",
+          "2488",
+          "2489",
+          "2490",
+          "2491",
+          "2492",
+          "25",
+          "2513",
+          "2553",
+          "26",
+          "261",
+          "361",
+          "4",
+          "41",
+          "461",
+          "481",
+          "5",
+          "501",
+          "521",
+          "541",
+          "561",
+          "601",
+          "61",
+          "62",
+          "621",
+          "622",
+          "63",
+          "641",
+          "661",
+          "681",
+          "701",
+          "721",
+          "722",
+          "741",
+          "761",
+          "781",
+          "801",
+          "81",
+          "821",
+          "841",
+          "842",
+          "861",
+          "881",
+          "9",
+          "901",
+          "921",
+          "941",
+          "961",
+          "981",
+          "default"
+        ],
+        "categoryName": ["Arroz"]
+      }
+    }
+  ],
+  "sort": [
+    {
+      "label": "Maiores descontos",
+      "name": "descdiscount",
+      "type": "default",
+      "applyLink": "/engage/search/v3/search?apikey=paodeacucar&terms=arroz&resultsperpage=5&sortby=descdiscount"
+    },
+    {
+      "label": "Relevância",
+      "name": "relevance",
+      "type": "default",
+      "applyLink": "/engage/search/v3/search?apikey=paodeacucar&terms=arroz&resultsperpage=5&sortby=relevance"
+    },
+    {
+      "label": "Piores avaliações",
+      "name": "ascreview",
+      "type": "default",
+      "applyLink": "/engage/search/v3/search?apikey=paodeacucar&terms=arroz&resultsperpage=5&sortby=ascreview"
+    },
+    {
+      "label": "Por id",
+      "name": "pid",
+      "type": "default",
+      "applyLink": "/engage/search/v3/search?apikey=paodeacucar&terms=arroz&resultsperpage=5&sortby=pid"
+    },
+    {
+      "label": "Melhores avaliações",
+      "name": "descreview",
+      "type": "default",
+      "applyLink": "/engage/search/v3/search?apikey=paodeacucar&terms=arroz&resultsperpage=5&sortby=descreview"
+    },
+    {
+      "label": "Menor preço",
+      "name": "ascprice",
+      "type": "default",
+      "applyLink": "/engage/search/v3/search?apikey=paodeacucar&terms=arroz&resultsperpage=5&sortby=ascprice"
+    },
+    {
+      "label": "Maior preço",
+      "name": "descprice",
+      "type": "default",
+      "applyLink": "/engage/search/v3/search?apikey=paodeacucar&terms=arroz&resultsperpage=5&sortby=descprice"
+    },
+    {
+      "label": "Menor margem",
+      "name": "ascgain",
+      "type": "default",
+      "applyLink": "/engage/search/v3/search?apikey=paodeacucar&terms=arroz&resultsperpage=5&sortby=ascgain"
+    },
+    {
+      "label": "Maior margem",
+      "name": "descgain",
+      "type": "default",
+      "applyLink": "/engage/search/v3/search?apikey=paodeacucar&terms=arroz&resultsperpage=5&sortby=descgain"
+    },
+    {
+      "label": "Menor distância",
+      "name": "ascdistance",
+      "type": "default",
+      "applyLink": "/engage/search/v3/search?apikey=paodeacucar&terms=arroz&resultsperpage=5&sortby=ascdistance"
+    },
+    {
+      "label": "Maior distância",
+      "name": "descdistance",
+      "type": "default",
+      "applyLink": "/engage/search/v3/search?apikey=paodeacucar&terms=arroz&resultsperpage=5&sortby=descdistance"
+    },
+    {
+      "label": "Novidades",
+      "name": "descdate",
+      "type": "default",
+      "applyLink": "/engage/search/v3/search?apikey=paodeacucar&terms=arroz&resultsperpage=5&sortby=descdate"
+    },
+    {
+      "label": "Menos vendidos",
+      "name": "ascsold",
+      "type": "default",
+      "applyLink": "/engage/search/v3/search?apikey=paodeacucar&terms=arroz&resultsperpage=5&sortby=ascsold"
+    },
+    {
+      "label": "Mais vendidos",
+      "name": "descsold",
+      "type": "default",
+      "applyLink": "/engage/search/v3/search?apikey=paodeacucar&terms=arroz&resultsperpage=5&sortby=descsold"
+    }
+  ],
+  "queries": {
+    "original": "arroz",
+    "normalized": "arroz",
+    "processed": "arroz",
+    "queryType": "found"
+  }
+}
