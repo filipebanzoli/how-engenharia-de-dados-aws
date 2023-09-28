@@ -1,13 +1,13 @@
 terraform {
 
-  required_version = ">= 1.0" 
+  required_version = ">= 1.0"
   required_providers {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 5.0"
     }
     airbyte = {
-      source = "airbytehq/airbyte"
+      source  = "airbytehq/airbyte"
       version = "0.3.4"
     }
   }
@@ -16,7 +16,7 @@ terraform {
 # Configure the AWS Provider
 # provider "aws" {
 #   region = "us-east-1"
-  
+
 # }
 
 # # #S3
@@ -55,15 +55,15 @@ resource "aws_s3_bucket" "data-lake-production" {
 #Airbyte
 
 # provider "airbyte" {
-#   // If running on Airbyte Cloud, 
+#   // If running on Airbyte Cloud,
 #   // generate & save your API key from https://portal.airbyte.com
 #   bearer_auth = "eyJhbGciOiJSUzI1NiIsImtpZCI6IjE2OGFhZjMxLTdhMWUtNDQyNi1iZTRlLWVlNDY4YzUyMzIxZCIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiY2xhazFzdTU5MDAwMDNiNmNqNW1tcWc4dSJdLCJjdXN0b21lcl9pZCI6ImExMTAyYzcxLTA2YzgtNDc2NS04NmI1LTU1Y2EwNGYwMWEwNCIsImVtYWlsIjoibG9ycmFucGltZW50YUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ImZhbHNlIiwiZXhwIjoyNTM0MDIyMTQ0MDAsImlhdCI6MTY5NTg1MzI2NywiaXNzIjoiaHR0cHM6Ly9hcHAuc3BlYWtlYXN5YXBpLmRldi92MS9hdXRoL29hdXRoL2NsYWsxc3U1OTAwMDAzYjZjajVtbXFnOHUiLCJqdGkiOiIxNjhhYWYzMS03YTFlLTQ0MjYtYmU0ZS1lZTQ2OGM1MjMyMWQiLCJraWQiOiIxNjhhYWYzMS03YTFlLTQ0MjYtYmU0ZS1lZTQ2OGM1MjMyMWQiLCJuYmYiOjE2OTU4NTMyMDcsInNwZWFrZWFzeV9jdXN0b21lcl9pZCI6Ikg4ekFOY0xsTlJNMnBPR3RKSnFTaEVQWlNYSTIiLCJzcGVha2Vhc3lfd29ya3NwYWNlX2lkIjoiY2xhazFzdTU5MDAwMDNiNmNqNW1tcWc4dSIsInN1YiI6Ikg4ekFOY0xsTlJNMnBPR3RKSnFTaEVQWlNYSTIiLCJ1c2VyX2lkIjoiSDh6QU5jTGxOUk0ycE9HdEpKcVNoRVBaU1hJMiJ9.MYmnlo9y9EMe4HffOnXHZBM6Srf6MmtHHExOY4aaygQOmV_jQKMfe5kUmrrmhCP4afGMlyhoUymn43lCD4clqn5M4yyZStCHI1bFz0ZdWzN2y0KWneFEer2tDIiXq4oGYbojkwzj6yVD08e9JDLHwc7uKdBkqCd4MPJiAqPcpTJ3HadWP3PrACO20IJ05mV2sYtTbdkRSfYTRGgmZfT_o4kJeWyQNQikfq4elEQ95IkNqBAOGBxbGU0UUFQxIhUbbvkM6yiAeBbEuKm3ZXNqzZVqALvlKVrslkLTOC9zxdgeY2bvAIf42ybKJLQcoZRRhxLd0hmNBdlmnRQ8m-glmw"
-  
-#   // If running locally (Airbyte OSS) with docker-compose using the airbyte-proxy, 
+
+#   // If running locally (Airbyte OSS) with docker-compose using the airbyte-proxy,
 #   // include the actual password/username you've set up (or use the defaults below)
 #   password = "password"
 #   username = "username"
-  
+
 #   // if running locally (Airbyte OSS), include the server url to the airbyte-api-server
 #   #server_url = "http://localhost:8006/v1/" // (and UI is at http://airbyte.company.com:8000)
 # }
@@ -92,4 +92,3 @@ resource "aws_s3_bucket" "data-lake-production" {
 #   name         = "Joyce O'Kon"
 #   workspace_id = "9da660ff-57bf-4aad-8f9e-fc1b4512c103"
 # }
-
