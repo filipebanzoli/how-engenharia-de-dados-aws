@@ -49,20 +49,20 @@ resource "aws_s3_bucket" "data-lake-development" {
 resource "aws_s3_bucket_public_access_block" "data-lake-production" {
   bucket = aws_s3_bucket.data-lake-production.id
 
-  block_public_acls       = false
-  block_public_policy     = false
-  ignore_public_acls      = false
-  restrict_public_buckets = false
+  block_public_acls       = true
+  block_public_policy     = true
+  ignore_public_acls      = true
+  restrict_public_buckets = true
 }
 
 # Bucket Dev security
 resource "aws_s3_bucket_public_access_block" "data-lake-development" {
   bucket = aws_s3_bucket.data-lake-development.id
 
-  block_public_acls       = false
-  block_public_policy     = false
-  ignore_public_acls      = false
-  restrict_public_buckets = false
+  block_public_acls       = true
+  block_public_policy     = true
+  ignore_public_acls      = true
+  restrict_public_buckets = true
 }
 
 #Create airbyte user
