@@ -3,7 +3,7 @@
 
 O objetivo dessa etapa do projeto é trazer dados de uma planilha do Google Sheets para o Data Lake no S3.
 
-Estaremos utilizando ferramentas low-code para tal fim, em corroboração com a mentalidade que tenho ensinado "Utilizar ferramentas prontas aonde já existe e criar soluções novas aonde necessitar". 
+Estaremos utilizando ferramentas low-code para tal fim, em corroboração com a mentalidade que tenho ensinado "Utilizar ferramentas prontas aonde já existe e criar soluções novas aonde necessitar".
 
 Caso a sua equipe ainda assim quiser criar um script para trazer dados do Google Sheets para o S3, pode fazer isso. Uma dica seria daí utilizar a orientação a objeto.
 
@@ -12,7 +12,7 @@ Nessa etapa estaremos:
 - criando um usuário sistêmico para o Airbyte com permissão para inserir dados no S3
 - criando uma service account do Google para trazer dados da planilha
 - criando uma conta no [Airbyte Cloud](https://airbyte.com/)
-- configurando uma integração de dados entre o Google Sheets e o Data Lake em S3.
+- configurando uma integração de dados entre o Google Sheets e o Data Lake em S3 via Airbyte.
 
 ## Lembrem de deixar organizado os arquivos da sua equipe [dentro da pasta da sua equipe](../../../) e não no geral.
 

@@ -1,4 +1,5 @@
 terraform {
+  required_version = ">= 1.0"
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -8,13 +9,13 @@ terraform {
 }
 
 # Configure the AWS Provider
-# Credentials set in vars.tf file 
+# Credentials set in vars.tf file
 provider "aws" {
-  profile = "default"
-  region = "us-east-1"
+  profile    = "default"
+  region     = "us-east-1"
   access_key = var.aws_access_key_id
   secret_key = var.aws_access_secret_key
-  token = var.aws_session_token
+  token      = var.aws_session_token
   default_tags {
     tags = {
       Owner = "equipe_a"
@@ -111,6 +112,3 @@ resource "aws_iam_user_policy" "airbyte-policy" {
     ]
   })
 }
-
-
-

@@ -57,7 +57,7 @@
                     "SubnetIdentifier": "subnet-008bbec118caef7a1",
                     "SubnetAvailabilityZone": {
                         "Name": "us-east-1f"
-                    },
+                    }
                 }
             ],
             "AvailabilityZone": "us-east-1a",

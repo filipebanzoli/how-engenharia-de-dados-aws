@@ -6,7 +6,6 @@ from mercado_bitcoin.apis import DaySummaryApi
 
 
 class DataIngestor(ABC):
-
     def __init__(self, writer, coins: List[str], default_start_date: datetime.date) -> None:
         self.default_start_date = default_start_date
         self.coins = coins
@@ -38,7 +37,6 @@ class DataIngestor(ABC):
 
 
 class DaySummaryIngestor(DataIngestor):
-
     def ingest(self) -> None:
         date = self._load_checkpoint()
         if date < datetime.date.today():

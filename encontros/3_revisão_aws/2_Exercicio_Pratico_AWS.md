@@ -8,14 +8,14 @@ Acesse via Console da AWS o portal do IAM Identity Center.
 - Clicar em ENABLE.
 - Create AWS Organization e habilitar IAM Identity Center
 
-- Crie um User 
+- Crie um User
   - Informe a opção que preferir quanto a criar a senha via e-mail ou gerar senha única.
   - Se optou por receber a senha por e-mail, depois acesse o e-mail e siga o processo para configurar a senha.
 - Crie um Grupo Admin.
 - Atribua o usuário ao grupo Admin.
 - Crie uma Permission Set de Administrador.
 - Na Aba AWS Accounts, selecione a conta atual e faça o Assign group, do grupo Admin para a permission Admin.
-  
+
 
 - Na aba Dashboard você encontrará à direita o AWS access portal URL, entre no link. Recomendo deixar esse link nos favoritos, pois é a forma que recomendo você acessar sua conta da AWS.
 - Faça o login, e então você terá acesso a um portal de acesso do usuário.
