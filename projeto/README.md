@@ -42,10 +42,11 @@ Para destruir os recursos:
 ## O que precisa já estar no projeto:
 
 ### O que é obrigatório:
-- Incluir fonte de dados do condor usando AWS Lambda.
+- Incluir fonte de dados do condor (ou qualquer outro mercado/loja) usando AWS Lambda.
 - Incluir fonte de dados de planilha usando Airbyte Cloud, Google Sheets, AWS. ([source worksheet](./geral/sources/worksheet/))
 
 ### O que é opcional:
 - Incluir fonte de dados de mercado livre, usando Selenium
+- Incluir teste de integração em pelo menos uma das pipelines em Python desenvolvidas.
 
 ### Sinta-se na liberdade de expandir o seu projeto também!

@@ -10,13 +10,13 @@ class Pessoa:
 
     @property
     def idade(self) -> int:
-         return math.floor((datetime.date.today() - self.data_de_nascimento).days / 365.2425)
+        return math.floor((datetime.date.today() - self.data_de_nascimento).days / 365.2425)
 
     def __str__(self) -> str:
         return f"{self.nome} {self.sobrenome} tem {self.idade} anos"
 
 
-andre = Pessoa(nome='Andre', sobrenome='Sionek', data_de_nascimento=datetime.date(1991, 1, 9))
+andre = Pessoa(nome="Andre", sobrenome="Sionek", data_de_nascimento=datetime.date(1991, 1, 9))
 
 
 print(andre)
