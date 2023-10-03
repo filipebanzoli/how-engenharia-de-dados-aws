@@ -12,11 +12,11 @@ terraform {
     }
     random = {
       source  = "hashicorp/random"
-      version = "~> 3.0.0"
+      version = "~> 3.0"
     }
     http = {
       source  = "hashicorp/http"
-      version = "~> 3.0.0"
+      version = "~> 3.0"
     }
     null = {
       source  = "hashicorp/null"
@@ -78,6 +78,23 @@ resource "random_password" "postgres_transactional_fake_data_password" {
   override_special = "!$-+<>:"
 }
 
+resource "aws_db_parameter_group" "transactional" {
+  name        = "transactional-database"
+  family      = "postgres15"
+  description = "Transactional Database Replication Parameter Group"
+
+  parameter {
+    name  = "rds.logical_replication"
+    value = "1"
+    apply_method = "pending-reboot"
+  }
+    parameter {
+    name  = "shared_preload_libraries"
+    value = "1"
+    apply_method = "pg_stat_statements,pglogical"
+  }
+}
+
 resource "aws_db_instance" "transactional" {
   #tfsec:aws-rds-encrypt-instance-storage-data
   # Não estamos criptografando storage por questões de custo
@@ -87,6 +104,8 @@ resource "aws_db_instance" "transactional" {
   identifier              = "transactional"
   multi_az                = false
   engine                  = "postgres"
+  engine_version          = "15.3"
+  parameter_group_name    = aws_db_parameter_group.transactional.id
   instance_class          = "db.t3.micro"
   username                = local.transactional_root_user
   password                = local.transactional_root_password
@@ -134,26 +153,26 @@ module "docker_image" {
 }
 
 
-resource "aws_iam_role" "read_fake_data_app_secret_key" {
-  name = "read_fake_data_app_secret_key_role"
+resource "aws_iam_role" "execute_fake_data_app_lambda" {
+  name = "execute_fake_data_app_lambda_role"
 
-  # Terraform's "jsonencode" function converts a
-  # Terraform expression result to valid JSON syntax.
-  assume_role_policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [
-      {
-        Action = "sts:AssumeRole"
-        Effect = "Allow"
-        Principal = {
-          Service = "lambda.amazonaws.com"
-        }
-      },
-    ]
-  })
+    # Terraform's "jsonencode" function converts a
+    # Terraform expression result to valid JSON syntax.
+    assume_role_policy = jsonencode({
+      Version = "2012-10-17"
+      Statement = [
+        {
+          Action = "sts:AssumeRole"
+          Effect = "Allow"
+          Principal = {
+            Service = "lambda.amazonaws.com"
+          }
+        },
+      ]
+    })
 
-  managed_policy_arns = ["arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
-  "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"]
+    managed_policy_arns = ["arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+    "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"]
 }
 
 data "aws_vpc" "selected" {
@@ -186,6 +205,7 @@ resource "aws_vpc_security_group_egress_rule" "lambda_insert_fake_data_egress" {
 module "lambda_function" {
   source  = "terraform-aws-modules/lambda/aws"
   version = "~> 6.0.0"
+  depends_on = [null_resource.transactional_database_setup]
 
   function_name  = "insert_fake_data"
   create_package = false
@@ -193,7 +213,7 @@ module "lambda_function" {
   image_uri     = module.docker_image.image_uri
   package_type  = "Image"
   create_role   = false
-  lambda_role   = aws_iam_role.read_fake_data_app_secret_key.arn
+  lambda_role   = aws_iam_role.execute_fake_data_app_lambda.arn
   architectures = ["arm64"]
   memory_size   = 256
   timeout       = 60
