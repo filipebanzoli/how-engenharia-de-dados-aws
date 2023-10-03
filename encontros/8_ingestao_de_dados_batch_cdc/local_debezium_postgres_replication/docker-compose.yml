@@ -1,0 +1,16 @@
+version: "3"
+services:
+    db:
+        image: debezium/postgres
+        environment:
+            ######################
+            # Deixando senha aqui apenas para fins de teste local
+            ######################
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+            - POSTGRES_DB=postgres
+        ports:
+            - "5432:5432"
+        volumes:
+            - "./db:/var/lib/postgresql/data/"
+            - "./example1.sql:/tmp/example1.sql"
