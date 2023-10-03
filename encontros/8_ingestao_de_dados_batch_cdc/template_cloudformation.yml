@@ -1,0 +1,173 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Resources:
+  MyDBSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: encontro-7-rds-credentials
+      GenerateSecretString:
+        SecretStringTemplate: '{"username": "user_admin"}'
+        GenerateStringKey: 'password'
+        PasswordLength: 16
+        ExcludeCharacters: '"@/\;+%'
+
+  MyBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "${AWS::AccountId}-${AWS::StackName}"
+
+  MyDBInstance:
+    Type: AWS::RDS::DBInstance
+    DependsOn:
+      - MyDBSecret
+    Properties:
+      DBInstanceClass: db.t3.micro # free tier
+      Engine: postgres
+      EngineVersion: "14.7"
+      MasterUsername: '{{resolve:secretsmanager:encontro-7-rds-credentials:SecretString:username}}'
+      MasterUserPassword: '{{resolve:secretsmanager:encontro-7-rds-credentials:SecretString:password}}'
+      DBName: postgres
+      AllocatedStorage: '20'
+      MultiAZ: false
+      DBParameterGroupName: !Ref MyDBParameterGroup
+
+  MyDBParameterGroup:
+    Type: AWS::RDS::DBParameterGroup
+    Properties:
+      Family: postgres14
+      Description: My DB parameter group
+      Parameters:
+        rds.logical_replication: '1'
+        shared_preload_libraries: 'pg_stat_statements,pglogical'
+
+  MyDMSReplicationInstance:
+    Type: AWS::DMS::ReplicationInstance
+    Properties:
+      ReplicationInstanceClass: dms.t2.micro # Free tier
+      EngineVersion: 3.4.7
+      MultiAZ: false
+
+  MyDMSSourceEndpoint:
+    Type: AWS::DMS::Endpoint
+    Properties:
+      EndpointType: source
+      EngineName: postgres
+      ExtraConnectionAttributes: 'PluginName=PGLOGICAL;'
+      ServerName: !GetAtt MyDBInstance.Endpoint.Address
+      Port: !GetAtt MyDBInstance.Endpoint.Port
+      DatabaseName: postgres
+      Username: '{{resolve:secretsmanager:encontro-7-rds-credentials:SecretString:username}}'
+      Password: '{{resolve:secretsmanager:encontro-7-rds-credentials:SecretString:password}}'
+
+  MyDMSTargetRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: 'Allow'
+            Principal:
+              Service: 'dms.amazonaws.com'
+            Action: 'sts:AssumeRole'
+      Path: '/'
+      Policies:
+        - PolicyName: 'DMSAccessToS3'
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: 'Allow'
+                Action:
+                  - 's3:PutObject'
+                  - 's3:GetBucketLocation'
+                  - 's3:GetObject'
+                  - 's3:ListBucket'
+                  - 's3:DeleteObject'
+                Resource:
+                  - !Sub 'arn:aws:s3:::${MyBucket}'
+                  - !Sub 'arn:aws:s3:::${MyBucket}/*'
+
+  MyDMSTargetEndpoint:
+    Type: 'AWS::DMS::Endpoint'
+    Properties:
+      EndpointType: target
+      EngineName: s3
+      S3Settings:
+        BucketFolder: 'dms'
+        BucketName: !Ref MyBucket
+        CompressionType: 'gzip'
+        CsvDelimiter: ','
+        CsvRowDelimiter: '\n'
+        Rfc4180: true
+        ExternalTableDefinition: ''
+        ServiceAccessRoleArn: !GetAtt MyDMSTargetRole.Arn
+
+  MyLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: encontro-7-dms-task
+
+  MyDMSTask:
+    Type: AWS::DMS::ReplicationTask
+    DependsOn:
+      - MyLogGroup
+    Properties:
+      ReplicationInstanceArn: !Ref MyDMSReplicationInstance
+      SourceEndpointArn: !Ref MyDMSSourceEndpoint
+      TableMappings: |
+        {
+          "rules": [
+            {
+              "rule-name": "1",
+              "rule-type": "selection",
+              "rule-id": "1",
+              "object-locator": {
+                "schema-name": "how",
+                "table-name": "%"
+              },
+              "rule-action": "include"
+            }
+          ]
+        }
+      TargetEndpointArn: !Ref MyDMSTargetEndpoint
+      MigrationType: full-load-and-cdc
+      ReplicationTaskSettings: !Sub >-
+        {
+        "Logging":
+            {
+                "EnableLogging": true,
+                "EnableLogContext": false,
+                "LogComponents":
+                    [
+                      {
+                        "Id": "FILE_FACTORY",
+                        "Severity": "LOGGER_SEVERITY_DEFAULT"
+                      },{
+                        "Id": "METADATA_MANAGER",
+                        "Severity": "LOGGER_SEVERITY_DEFAULT"
+                      },{
+                        "Id": "SORTER",
+                        "Severity": "LOGGER_SEVERITY_DEFAULT"
+                      },{
+                        "Id": "SOURCE_CAPTURE",
+                        "Severity": "LOGGER_SEVERITY_DEFAULT"
+                      },{
+                        "Id": "SOURCE_UNLOAD",
+                        "Severity": "LOGGER_SEVERITY_DEFAULT"
+                      },{
+                        "Id": "TABLES_MANAGER",
+                        "Severity": "LOGGER_SEVERITY_DEFAULT"
+                      },{
+                        "Id": "TARGET_APPLY",
+                        "Severity": "LOGGER_SEVERITY_DEFAULT"
+                      },{
+                        "Id": "TARGET_LOAD",
+                        "Severity": "LOGGER_SEVERITY_INFO"
+                      },{
+                        "Id": "TASK_MANAGER",
+                        "Severity": "LOGGER_SEVERITY_DEBUG"
+                      },{
+                        "Id": "TRANSFORMATION",
+                        "Severity": "LOGGER_SEVERITY_DEBUG"
+                      }
+                    ],
+            },
+            }
