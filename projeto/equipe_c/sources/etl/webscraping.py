@@ -11,12 +11,12 @@ class PaoDeAcucarWebScrapping(ABC):
         self.produto = produto
         self.url = self.base_url + self.produto
 
-    def scrapping_data(self, produto: str) -> json:
+    def scrapping_data(self) -> json:
         response = requests.get(self.url)
 
         soup = BeautifulSoup(response.text)
 
-        products = soup.find("div", {"class": "row mb-4"}).findAll("app-product")
+        products = soup.find("div", {"class": "product-cardstyles__CardStyled-sc-1uwpde0-0 bTCFJV cardstyles__Card-yvvqkp-0 gXxQWo"}).findAll("product-cardstyles__Link-sc-1uwpde0-9 bSQmwP hyperlinkstyles__Link-j02w35-0 coaZwR")
 
         products_data = []
         for product in products:
