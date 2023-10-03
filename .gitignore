@@ -200,3 +200,7 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+# Encontro 8 database
+encontros/8_ingestao_de_dados_batch_cdc/local_postgres_replication/db
+encontros/8_ingestao_de_dados_batch_cdc/local_debezium_postgres_replication/db
