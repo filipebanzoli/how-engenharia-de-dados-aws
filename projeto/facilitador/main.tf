@@ -4,17 +4,17 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 5.0"
     }
-    http = {
-      source  = "hashicorp/http"
-      version = "3.1.0"
-    }
-    random = {
-      source  = "hashicorp/random"
-      version = "3.5.1"
-    }
     docker = {
       source  = "kreuzwerker/docker"
       version = "3.0.2"
+    }
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.0"
+    }
+    http = {
+      source  = "hashicorp/http"
+      version = "~> 3.0"
     }
     null = {
       source  = "hashicorp/null"
@@ -37,7 +37,15 @@ module "transactional_database" {
   source = "../geral/sources/transactional_database"
 }
 
-module "worksheet" {
-  source = "./sources/worksheet"
+# module "worksheet" {
+#   source = "./sources/worksheet"
+# }
+
+module "transactional_data_ingestion" {
+  source                                      = "./data_ingestion/dms"
+  aws_db_instance_transactional_address       = module.transactional_database.aws_db_instance_transactional_address
+  aws_db_instance_transactional_port          = module.transactional_database.aws_db_instance_transactional_port
+  aws_db_instance_transactional_root_user     = module.transactional_database.aws_db_instance_transactional_root_user
+  aws_db_instance_transactional_root_password = module.transactional_database.aws_db_instance_transactional_root_password
 }
 

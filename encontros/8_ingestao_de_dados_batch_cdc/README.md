@@ -40,3 +40,4 @@ psql -U postgres -W -At -f /tmp/example1.sql postgres
 ```
 
 Fique à vontade para criar tabelas usando um cliente SQL e verificar o funcionamento do plugin também.
+

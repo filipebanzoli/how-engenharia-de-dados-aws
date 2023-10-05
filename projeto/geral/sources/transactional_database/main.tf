@@ -90,8 +90,8 @@ resource "aws_db_parameter_group" "transactional" {
   }
     parameter {
     name  = "shared_preload_libraries"
-    value = "1"
-    apply_method = "pg_stat_statements,pglogical"
+    value = "pg_stat_statements,pglogical"
+    apply_method = "pending-reboot"
   }
 }
 
@@ -123,7 +123,7 @@ resource "null_resource" "transactional_database_setup" {
   # runs after database and security group providing external access is created
   depends_on = [aws_db_instance.transactional]
   provisioner "local-exec" {
-    command = "psql -h ${aws_db_instance.transactional.address} -p ${aws_db_instance.transactional.port} -U ${local.transactional_root_user} -d transactional -f ./sources/transactional_database/prepare_database/terraform_prepare_database.sql -v user=${local.transactional_fake_data_user} -v password='${local.transactional_fake_data_password}'"
+    command = "psql -h ${aws_db_instance.transactional.address} -p ${aws_db_instance.transactional.port} -U ${local.transactional_root_user} -d transactional -f ${path.module}/prepare_database/terraform_prepare_database.sql -v user=${local.transactional_fake_data_user} -v password='${local.transactional_fake_data_password}'"
     environment = {
       PGPASSWORD = local.transactional_root_password
     }
