@@ -84,13 +84,13 @@ resource "aws_db_parameter_group" "transactional" {
   description = "Transactional Database Replication Parameter Group"
 
   parameter {
-    name  = "rds.logical_replication"
-    value = "1"
+    name         = "rds.logical_replication"
+    value        = "1"
     apply_method = "pending-reboot"
   }
-    parameter {
-    name  = "shared_preload_libraries"
-    value = "pg_stat_statements,pglogical"
+  parameter {
+    name         = "shared_preload_libraries"
+    value        = "pg_stat_statements,pglogical"
     apply_method = "pending-reboot"
   }
 }
@@ -156,23 +156,23 @@ module "docker_image" {
 resource "aws_iam_role" "execute_fake_data_app_lambda" {
   name = "execute_fake_data_app_lambda_role"
 
-    # Terraform's "jsonencode" function converts a
-    # Terraform expression result to valid JSON syntax.
-    assume_role_policy = jsonencode({
-      Version = "2012-10-17"
-      Statement = [
-        {
-          Action = "sts:AssumeRole"
-          Effect = "Allow"
-          Principal = {
-            Service = "lambda.amazonaws.com"
-          }
-        },
-      ]
-    })
+  # Terraform's "jsonencode" function converts a
+  # Terraform expression result to valid JSON syntax.
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Action = "sts:AssumeRole"
+        Effect = "Allow"
+        Principal = {
+          Service = "lambda.amazonaws.com"
+        }
+      },
+    ]
+  })
 
-    managed_policy_arns = ["arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
-    "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"]
+  managed_policy_arns = ["arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+  "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"]
 }
 
 data "aws_vpc" "selected" {
@@ -203,8 +203,8 @@ resource "aws_vpc_security_group_egress_rule" "lambda_insert_fake_data_egress" {
 }
 
 module "lambda_function" {
-  source  = "terraform-aws-modules/lambda/aws"
-  version = "~> 6.0.0"
+  source     = "terraform-aws-modules/lambda/aws"
+  version    = "~> 6.0.0"
   depends_on = [null_resource.transactional_database_setup]
 
   function_name  = "insert_fake_data"
