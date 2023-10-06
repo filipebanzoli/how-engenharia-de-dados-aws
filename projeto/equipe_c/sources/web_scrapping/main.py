@@ -4,6 +4,8 @@ import logging
 import pandas as pd
 import json
 
+from scrapping_call import ApiPaoAcucar
+
 
 #%%
 busca = ["arroz","feijão"]
@@ -95,3 +97,8 @@ df.head()
 
 
 # %%
+if __name__ == "__main__":
+
+    logging.getLogger().setLevel(logging.INFO)
+    logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
+    main()
