@@ -91,7 +91,7 @@ def main():
     logging.info("Getting query to insert in database")
     raw_query = read_query(Path("./partial_sql_insert.sql"))
 
-    for i in range(200):
+    for i in range(400):
         logging.info(f"Preparing to insert {i} row")
         logging.info("Applying jinja formatting in query")
         template = environment.from_string(raw_query)

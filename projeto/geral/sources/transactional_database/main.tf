@@ -66,6 +66,28 @@ resource "aws_vpc_security_group_ingress_rule" "lambda_insert_fake_data" {
   referenced_security_group_id = aws_security_group.insert_fake_data_sg.id
 }
 
+resource "aws_vpc_security_group_ingress_rule" "dms_ingress" {
+  security_group_id            = aws_security_group.transactional_database_sg.id
+  description                  = "Access Postgres from DMS"
+  ip_protocol                  = "-1"
+  referenced_security_group_id = aws_security_group.dms_sg.id
+}
+
+resource "aws_security_group" "dms_sg" {
+  name        = "dms_sg"
+  description = "Allow DMS Access to Transactional Database"
+  timeouts {
+    delete = "2m"
+  }
+}
+
+resource "aws_vpc_security_group_egress_rule" "dms_egress" {
+  security_group_id            = aws_security_group.dms_sg.id
+  description                  = "Access to Transactional Postgres Database"
+  ip_protocol                  = "-1"
+  referenced_security_group_id = aws_security_group.transactional_database_sg.id
+}
+
 resource "random_password" "postgres_transactional_root_password" {
   length           = 16
   special          = true
@@ -90,8 +112,13 @@ resource "aws_db_parameter_group" "transactional" {
   }
   parameter {
     name         = "shared_preload_libraries"
-    value        = "1"
-    apply_method = "pg_stat_statements,pglogical"
+    value        = "pg_stat_statements,pglogical"
+    apply_method = "pending-reboot"
+  }
+  parameter {
+    name         = "rds.force_ssl"
+    value        = "0"
+    apply_method = "immediate"
   }
 }
 
@@ -123,7 +150,7 @@ resource "null_resource" "transactional_database_setup" {
   # runs after database and security group providing external access is created
   depends_on = [aws_db_instance.transactional]
   provisioner "local-exec" {
-    command = "psql -h ${aws_db_instance.transactional.address} -p ${aws_db_instance.transactional.port} -U ${local.transactional_root_user} -d transactional -f ./sources/transactional_database/prepare_database/terraform_prepare_database.sql -v user=${local.transactional_fake_data_user} -v password='${local.transactional_fake_data_password}'"
+    command = "psql -h ${aws_db_instance.transactional.address} -p ${aws_db_instance.transactional.port} -U ${local.transactional_root_user} -d transactional -f ${path.module}/prepare_database/terraform_prepare_database.sql -v user=${local.transactional_fake_data_user} -v password='${local.transactional_fake_data_password}'"
     environment = {
       PGPASSWORD = local.transactional_root_password
     }
