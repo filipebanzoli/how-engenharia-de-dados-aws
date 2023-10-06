@@ -28,4 +28,3 @@ output "aws_security_group_dms_sg" {
   description = "AWS Security Group DMS"
   value       = aws_security_group.dms_sg.id
 }
-

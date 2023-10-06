@@ -51,4 +51,3 @@ module "transactional_data_ingestion" {
   aws_s3_bucket_data_lake                     = module.worksheet.aws_s3_bucket_data_lake
   aws_security_group_dms_sg                   = module.transactional_database.aws_security_group_dms_sg
 }
-
