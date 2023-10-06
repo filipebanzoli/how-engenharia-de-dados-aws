@@ -66,6 +66,28 @@ resource "aws_vpc_security_group_ingress_rule" "lambda_insert_fake_data" {
   referenced_security_group_id = aws_security_group.insert_fake_data_sg.id
 }
 
+resource "aws_vpc_security_group_ingress_rule" "dms_ingress" {
+  security_group_id            = aws_security_group.transactional_database_sg.id
+  description                  = "Access Postgres from DMS"
+  ip_protocol                  = "-1"
+  referenced_security_group_id = aws_security_group.dms_sg.id
+}
+
+resource "aws_security_group" "dms_sg" {
+  name        = "dms_sg"
+  description = "Allow DMS Access to Transactional Database"
+  timeouts {
+    delete = "2m"
+  }
+}
+
+resource "aws_vpc_security_group_egress_rule" "dms_egress" {
+  security_group_id            = aws_security_group.dms_sg.id
+  description                  = "Access to Transactional Postgres Database"
+  ip_protocol                  = "-1"
+  referenced_security_group_id = aws_security_group.transactional_database_sg.id
+}
+
 resource "random_password" "postgres_transactional_root_password" {
   length           = 16
   special          = true
@@ -92,6 +114,11 @@ resource "aws_db_parameter_group" "transactional" {
     name         = "shared_preload_libraries"
     value        = "pg_stat_statements,pglogical"
     apply_method = "pending-reboot"
+  }
+  parameter {
+    name         = "rds.force_ssl"
+    value        = "0"
+    apply_method = "immediate"
   }
 }
 
