@@ -78,14 +78,14 @@ variable "aws_security_group_dms_sg" {
   description = "AWS Security Group DMS"
 }
 
-data "aws_vpc" "selected" {
+data "aws_vpc" "default" {
   default = true
 }
 
 resource "random_password" "postgres_transactional_replication_password" {
   length           = 16
   special          = true
-  override_special = "!$-+<>:"
+  override_special = "!$-<>:"
 }
 
 resource "null_resource" "transactional_replication_setup" {
@@ -157,11 +157,12 @@ resource "time_sleep" "wait_20_seconds" {
 
 # Create a new replication instance
 resource "aws_dms_replication_instance" "dms_default_instance" {
-  allocated_storage          = 5
-  engine_version             = "3.4.6"
-  multi_az                   = false
-  replication_instance_class = "dms.t2.micro"
-  replication_instance_id    = "dms-default-instance"
+  allocated_storage           = 5
+  engine_version              = "3.5.1"
+  multi_az                    = false
+  replication_instance_class  = "dms.t2.micro"
+  replication_instance_id     = "dms-default-instance"
+  allow_major_version_upgrade = true
 
   vpc_security_group_ids = [
     var.aws_security_group_dms_sg
@@ -358,4 +359,36 @@ resource "aws_dms_replication_task" "transactional_database_to_datalake" {
   lifecycle {
     ignore_changes = [replication_task_settings]
   }
+}
+
+resource "aws_vpc_endpoint" "private_s3" {
+  vpc_id            = data.aws_vpc.default.id
+  service_name      = "com.amazonaws.us-east-1.s3"
+  vpc_endpoint_type = "Gateway"
+
+  tags = {
+    Name = "s3-endpoint"
+  }
+}
+
+data "aws_route_tables" "rts" {
+  vpc_id = data.aws_vpc.default.id
+  filter {
+    name   = "association.main"
+    values = [true]
+  }
+}
+
+resource "aws_vpc_endpoint_route_table_association" "private_s3" {
+  vpc_endpoint_id = aws_vpc_endpoint.private_s3.id
+  route_table_id  = element(data.aws_route_tables.rts.ids, 1)
+}
+
+resource "aws_vpc_security_group_egress_rule" "dms_egress_to_s3" {
+  security_group_id = var.aws_security_group_dms_sg
+  description       = "Access to S3 from VPN"
+  ip_protocol       = "TCP"
+  from_port         = 443
+  to_port           = 443
+  prefix_list_id    = aws_vpc_endpoint.private_s3.prefix_list_id
 }
