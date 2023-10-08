@@ -47,3 +47,5 @@ GRANT EXECUTE ON FUNCTION dms_replication.awsdms_intercept_ddl() TO :user;
 
 CREATE EVENT TRIGGER awsdms_intercept_ddl ON ddl_command_end
 EXECUTE PROCEDURE dms_replication.awsdms_intercept_ddl();
+
+CREATE extension pglogical;
