@@ -81,7 +81,7 @@ resource "aws_security_group" "dms_sg" {
   }
 }
 
-resource "aws_vpc_security_group_egress_rule" "dms_egress" {
+resource "aws_vpc_security_group_egress_rule" "dms_egress_to_db" {
   security_group_id            = aws_security_group.dms_sg.id
   description                  = "Access to Transactional Postgres Database"
   ip_protocol                  = "-1"
@@ -91,13 +91,13 @@ resource "aws_vpc_security_group_egress_rule" "dms_egress" {
 resource "random_password" "postgres_transactional_root_password" {
   length           = 16
   special          = true
-  override_special = "!$-+<>:"
+  override_special = "!$-<>:"
 }
 
 resource "random_password" "postgres_transactional_fake_data_password" {
   length           = 16
   special          = true
-  override_special = "!$-+<>:"
+  override_special = "!$-<>:"
 }
 
 resource "aws_db_parameter_group" "transactional" {
