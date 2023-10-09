@@ -27,15 +27,18 @@ terraform {
   }
 }
 
-# Configure the AWS Provider
-provider "aws" {
-  region = "us-east-1"
-  default_tags {
-    tags = {
-      Owner = "facilitador"
-    }
-  }
-}
+# When importing this module, don't forget to configure
+# in your main.tf the desired region and your teams's
+# tag. For example:
+#
+# provider "aws" {
+#   region = "us-east-1"
+#   default_tags {
+#     tags = {
+#       Owner = "equipe_a"
+#     }
+#   }
+# }
 
 locals {
   transactional_replication_user     = "replication_app"
@@ -221,15 +224,6 @@ resource "aws_iam_role" "s3_dms_target_role" {
           "s3:PutObjectTagging"]
           Resource = ["arn:aws:s3:::${var.aws_s3_bucket_data_lake}",
           "arn:aws:s3:::${var.aws_s3_bucket_data_lake}/*"]
-        },
-        {
-          Effect = "Allow",
-          Action = [
-            "s3:ListBucket"
-          ],
-          Resource = [
-            "arn:aws:s3:::${var.aws_s3_bucket_data_lake}"
-          ]
         }
       ]
     })
