@@ -59,9 +59,13 @@ resource "aws_iam_role" "aws_role_lambda" {
   })
 }
 
+resource "aws_iam_user" "lambda_user" {
+  name = "lambda_user"
+  path = "/system/"
+}
 
 resource "aws_iam_access_key" "lambda_access_key" {
-  user = aws_iam_role.aws_role_lambda.name
+  user = aws_iam_user.lambda_user.name
 }
 
 output "secret_access_key" {
