@@ -1,11 +1,34 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+    http = {
+      source  = "hashicorp/http"
+      version = "3.1.0"
+    }
+    random = {
+      source  = "hashicorp/random"
+      version = "3.5.1"
+    }
+}
+}
 provider "aws" {
   region = "us-east-1" # Change to your desired region
+
+}
+# Get current public IP address
+data "http" "my_public_ip" {
+  url = "http://ipv4.icanhazip.com"
 }
 # Configura a conta
 data "aws_caller_identity" "current" {}
 
 # Busca a conta  AWS Account ID
+
 locals {
+  my_public_ip                     = sensitive(chomp(data.http.my_public_ip.response_body))
   aws_account_id = data.aws_caller_identity.current.account_id
 }
 resource "aws_s3_bucket" "MyBucket" {
@@ -16,6 +39,30 @@ resource "random_password" "postgres_transactional_root_password" {
   length           = 16
   special          = true
   override_special = "!$-+<>:"
+}
+
+
+
+
+resource "aws_security_group" "transactional_database_sg" {
+  name        = "transactional_database_sg"
+  description = "Allow access by my Public IP Address and AWS Lambda"
+}
+
+resource "aws_vpc_security_group_ingress_rule" "my_public_ip"  {
+  security_group_id = aws_security_group.transactional_database_sg.id
+  description = "Access Postgres from my public IP"
+  from_port   = 5432
+  to_port     = 5432
+  ip_protocol    = "tcp"
+  cidr_ipv4 = "${local.my_public_ip}/32"
+}
+
+resource "aws_vpc_security_group_ingress_rule" "cdc_dms_pg" {
+  security_group_id = aws_security_group.transactional_database_sg.id
+  description = "Access Postgres from  DMS"
+  ip_protocol = "-1"
+  referenced_security_group_id = aws_security_group.transactional_database_sg.id
 }
 
 resource "aws_db_instance" "MyDBInstance" {

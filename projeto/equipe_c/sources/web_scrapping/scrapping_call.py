@@ -28,10 +28,10 @@ class PaoAcucarApi(ABC):
     def _get_endpoint(self,**kwargs)-> str:
         pass
                           
-    @on_exception(expo,ratelimit.exception.RateLimitException,max_tries = 6)
+    @on_exception(expo,ratelimit.exception.RateLimitException,max_tries = 10)
     @on_exception(expo,requests.exceptions.RequestException)   
-    @ratelimit.limits(calls=29,period=30)
-    @on_exception(expo,requests.exceptions.HTTPError,max_tries=6,logger=logger)
+    @ratelimit.limits(calls=20,period=30)
+    @on_exception(expo,requests.exceptions.HTTPError,max_tries=10,logger=logger)
     def get_data(self,**kwargs) -> dict:
         endpoint = self._get_endpoint(**kwargs)
         try:
