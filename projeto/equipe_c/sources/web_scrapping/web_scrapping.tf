@@ -4,25 +4,26 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 5.0"
     }
-    http = {
-      source  = "hashicorp/http"
-      version = "3.1.0"
-    }
     docker = {
       source  = "kreuzwerker/docker"
       version = "3.0.2"
     }
-    null = {
-      source  = "hashicorp/null"
-      version = "3.2.1"
-    }
   }
 }
 
-
-# Configure the AWS Provider
 provider "aws" {
   region = "us-east-1"
+}
+data "aws_caller_identity" "current" {}
+
+locals {
+  aws_account_id                   = data.aws_caller_identity.current.account_id
+}
+resource "aws_s3_bucket" "datalake_bucket" {
+  bucket = "raw-datalake-takedata"
+
+}
+data "aws_ecr_authorization_token" "token" {
 }
 
 provider "docker" {
@@ -32,7 +33,6 @@ provider "docker" {
     password = data.aws_ecr_authorization_token.token.password
   }
 }
-
 module "docker_image" {
   source = "terraform-aws-modules/lambda/aws//modules/docker-build"
 
@@ -42,74 +42,76 @@ module "docker_image" {
   source_path     = "./web_scrapping"
   platform        = "linux/arm64"
 }
+resource "aws_iam_role" "aws_role_lambda" {
+  name = "lambda_role"
 
-
-
-resource "aws_iam_role" "scrapping_secret_key" {
-  name = "scrapping_secret_key_role"
-
-  # Terraform's "jsonencode" function converts a
-  # Terraform expression result to valid JSON syntax.
   assume_role_policy = jsonencode({
-    Version = "2012-10-17"
+    Version = "2012-10-17",
     Statement = [
       {
-        Action = "sts:AssumeRole"
-        Effect = "Allow"
+        Action = "sts:AssumeRole",
+        Effect = "Allow",
         Principal = {
-          Service = "lambda.amazonaws.com"
-        }
+          Service = "lambda.amazonaws.com",
+        },
       },
     ]
   })
-
-  managed_policy_arns = ["arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
-  "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"]
-
-  inline_policy {
-    name = "scrapping_secret_policy"
-
-    policy = jsonencode({
-      Version = "2012-10-17"
-      Statement = [
-        {
-          Action   = ["secretsmanager:GetSecretValue",
-                      ""]
-          Effect   = "Allow"
-          Resource = aws_secretsmanager_secret.postgres_transactional_fake_data.arn
-        },
-      ]
-    })
-  }
 }
 
 
-
-data "aws_vpc" "selected" {
-  default = true
+resource "aws_iam_access_key" "lambda_access_key" {
+  user = aws_iam_role.aws_role_lambda.name
 }
 
-data "aws_subnets" "all" {
-  filter {
-    name   = "vpc-id"
-    values = [data.aws_vpc.selected.id]
-  }
+output "secret_access_key" {
+  value = aws_iam_access_key.lambda_access_key.secret
+  sensitive = true
+}
+resource "aws_iam_policy" "lambda_s3_access" {
+  name        = "LambdaS3Access"
+  description = "Policy for allowing Lambda to access S3 bucket"
+
+  policy = jsonencode({
+    Version = "2012-10-17",
+    Statement = [
+      {
+        Effect = "Allow",
+        Action = [
+          "s3:PutObject",
+          "s3:PutObjectAcl",
+          "s3:GetObject",
+          "s3:DeleteObject",
+          "s3:ListBucket",
+          "s3:ListBucketMultipartUploads",
+          "s3:AbortMultipartUpload",
+          "s3:CreateBucket"
+        ],
+        Resource = [
+          "${aws_s3_bucket.datalake_bucket.arn}",
+          "${aws_s3_bucket.datalake_bucket.arn}/*"
+        ]
+      }
+    ]
+  })
+}
+
+resource "aws_iam_role_policy_attachment" "lambda_s3_access_attachment" {
+  role       = aws_iam_role.aws_role_lambda.name
+  policy_arn = aws_iam_policy.lambda_s3_access.arn
 }
 
 module "lambda_function" {
   source = "terraform-aws-modules/lambda/aws"
 
-  function_name  = "writer_brass"
+  function_name = "web_scrapping"
   create_package = false
 
   image_uri     = module.docker_image.image_uri
-  package_type  = "Image"
-  create_role   = false
-  lambda_role   = aws_iam_role.scrapping_secret_key.arn
-  architectures = ["arm64"]
+  package_type = "Image"
+  create_role = false
+  lambda_role = aws_iam_role.aws_role_lambda.arn
+  architectures = ["x86_64"]
   memory_size   = 3008
   timeout       = 30
-
-  vpc_subnet_ids         = data.aws_subnets.all.ids
-  vpc_security_group_ids = [aws_security_group.my_ip.id]
 }
