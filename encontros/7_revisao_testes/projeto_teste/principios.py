@@ -60,7 +60,6 @@ from typing import List
 # curriculo_andre.adiciona_experiencia("How Education")
 
 
-
 class Vivente:
     def __init__(self, nome: str, data_de_nascimento: datetime.date) -> None:
         self.nome = nome
@@ -94,12 +93,11 @@ class Cachorro(Vivente):
         return self.emite_ruido("Au! Au!")
 
 
-
-andre2 = PessoaHeranca(nome='Andre', data_de_nascimento=datetime.date(1991, 1, 9))
+andre2 = PessoaHeranca(nome="Andre", data_de_nascimento=datetime.date(1991, 1, 9))
 
 print(andre2)
 
-belisco = Cachorro(nome='Belisco', data_de_nascimento=datetime.date(2019, 4, 15), raca='Lhasa Apso')
+belisco = Cachorro(nome="Belisco", data_de_nascimento=datetime.date(2019, 4, 15), raca="Lhasa Apso")
 
 print(belisco)
 

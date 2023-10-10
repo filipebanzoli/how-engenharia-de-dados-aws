@@ -12,7 +12,6 @@ class DataTypeNotSupportedForIngestionException(Exception):
 
 
 class DataWriter:
-
     def __init__(self, coin: str, api: str) -> None:
         self.api = api
         self.coin = coin

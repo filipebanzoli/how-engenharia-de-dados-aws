@@ -1,0 +1,17 @@
+# This is a comment.
+# Each line is a file pattern followed by one or more owners.
+
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+# @global-owner1 and @global-owner2 will be requested for
+# review when someone opens a pull request.
+*       @filipebanzoli
+
+
+# In this example, @doctocat owns any files in the build/logs
+# directory at the root of the repository and any of its
+# subdirectories.
+/projeto/equipe_a/ @flavia-lima @mau-me @filipebanzoli
+/projeto/equipe_b/ @rickymal @filipebanzoli
+/projeto/equipe_c/ @nat-rib @mateusvarelo @filipebanzoli
+/projeto/equipe_d/ @ffgama @lorran @filipebanzoli

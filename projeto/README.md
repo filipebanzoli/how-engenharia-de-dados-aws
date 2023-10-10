@@ -24,7 +24,7 @@ Até o momento as tecnologias utilizadas no projeto são:
 3. Agora clique na aba Chaves, agregar nova Chave e seleciona JSON
 4. Pronto, agora você já criou uma Service Account e baixou o chave no formato JSON.
 
-Após instalado e configurado essas tecnologias, para provisionar a infraestrutura basta executar os comandos tradicionais do terraform para planejar, criar e no final dos seus estudos diários, destruir a arquitetura. No diretório [geral](./geral/), executar:
+Após instalado e configurado essas tecnologias, para provisionar a infraestrutura basta executar os comandos tradicionais do terraform para planejar, criar e no final dos seus estudos diários, destruir a arquitetura. Os comandos abaixo devem ser feitos no diretório do projeto da sua equipe. Quer seja [equipe_a](./equipe_a/), [equipe_b](./equipe_b/), [equipe_c](./equipe_c/) e [equipe_d](./equipe_d/).
 
 Para planejar os recursos a serem criados:
 
@@ -42,10 +42,12 @@ Para destruir os recursos:
 ## O que precisa já estar no projeto:
 
 ### O que é obrigatório:
-- Incluir fonte de dados do condor usando AWS Lambda.
+- Incluir fonte de dados do condor (ou qualquer outro mercado/loja) usando AWS Lambda.
 - Incluir fonte de dados de planilha usando Airbyte Cloud, Google Sheets, AWS. ([source worksheet](./geral/sources/worksheet/))
+- Incluir streaming de dados via CDC do banco de dados transacional para o AWS S3, usando o DMS (código disponibilizado no diretório [data_ingestion/dms](./geral/data_ingestion/dms)).
 
 ### O que é opcional:
 - Incluir fonte de dados de mercado livre, usando Selenium
+- Incluir teste de integração em pelo menos uma das pipelines em Python desenvolvidas.
 
 ### Sinta-se na liberdade de expandir o seu projeto também!
