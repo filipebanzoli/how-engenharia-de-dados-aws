@@ -21,16 +21,15 @@ provider "aws" {
   token      = var.aws_session_token
   default_tags {
     tags = {
-      Owner = "my-bucket-equipe-d"
+      Owner = "my-bucket-equipe-b"
     }
   }
 }
 
 # Configure the AWS resource
 resource "aws_s3_bucket" "data-lake-production" {
-  bucket = "my-bucket-equipe-d"
+  bucket = "my-bucket-equipe-b"
   tags = {
-    Grupo = "my-bucket-equipe-d"
+    Grupo = "my-bucket-equipe-b"
   }
 }
-
