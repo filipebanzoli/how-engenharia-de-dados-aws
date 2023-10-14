@@ -34,12 +34,9 @@ provider "aws" {
   }
 }
 
-module "transactional_database" {
-  source = "./sources/modules/transactional_database"
-}
 
 module "transactional_data_ingestion" {
-  source                                      = "./data_ingestion/dms"
+  source                                      = "./sources/modules/database/data_ingestion_dms"
   aws_db_instance_transactional_database      = module.transactional_database.aws_db_instance_transactional_database
   aws_db_instance_transactional_address       = module.transactional_database.aws_db_instance_transactional_address
   aws_db_instance_transactional_port          = module.transactional_database.aws_db_instance_transactional_port
