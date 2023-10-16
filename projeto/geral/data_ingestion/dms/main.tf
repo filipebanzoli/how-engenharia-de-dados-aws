@@ -166,6 +166,7 @@ resource "aws_dms_replication_instance" "dms_default_instance" {
   replication_instance_class  = "dms.t2.micro"
   replication_instance_id     = "dms-default-instance"
   allow_major_version_upgrade = true
+  publicly_accessible         = true
 
   vpc_security_group_ids = [
     var.aws_security_group_dms_sg
