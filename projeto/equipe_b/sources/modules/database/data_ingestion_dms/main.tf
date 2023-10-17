@@ -35,7 +35,7 @@ terraform {
 #   region = "us-east-1"
 #   default_tags {
 #     tags = {
-#       Owner = "equipe_a"
+#       Owner = "equipe_b"
 #     }
 #   }
 # }
