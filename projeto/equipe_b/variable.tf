@@ -1,9 +1,3 @@
-# variable "bucket_name" {
-#   description = "Nome do bucket S3"
-#   type        = string
-# }
-
-
 variable "aws_access_key_id" {
   type        = string
   description = "AWS Access Key"
