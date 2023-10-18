@@ -19,7 +19,7 @@
 #   description = "Region"
 # }
 
-# variable "aws_bucket_name" {
+# variable "aws_s3_bucket" {
 #   type        = string  
 #   description = "Bucket Name"
 # }

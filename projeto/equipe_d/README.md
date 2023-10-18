@@ -1,1 +1,1 @@
-teste.
+![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=EquipeD&fontSize=92&animation=fadeIn&fontAlignY=38&desc=Pagina%20do%20time&descAlignY=51&descAlign=62)
