@@ -201,6 +201,15 @@ override.tf.json
 .terraformrc
 terraform.rc
 
+# Encontro 4 database
+encontros/4_sql/db
+
 # Encontro 8 database
 encontros/8_ingestao_de_dados_batch_cdc/local_postgres_replication/db
 encontros/8_ingestao_de_dados_batch_cdc/local_debezium_postgres_replication/db
+
+# Streamer Enrich Data artifact
+projeto/geral/sources/streamer/enrich_data.zip
+
+# Encontro 11 db
+encontros/11_transformacao_de_dados_com_dbt/postgres/data/db
