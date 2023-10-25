@@ -55,11 +55,11 @@ O dbt fornece um catálogo de dados builtin na ferramenta, [acesse aqui](https:/
 
 ### dbt manifest
 
-Uma peça fundamental na arquitetura do dbt é o `manifest.json`. Esse é um de alguns artefatos do dbt gerados, o qual possui informações valiosas do dbt, os quais podem ser utilizados para facilitar automações futuras, como por exemplo [automatizar a execução dos modelos usando o Airflow](https://www.astronomer.io/blog/airflow-dbt-1/).
+Uma peça fundamental na arquitetura do dbt é o `manifest.json`. Esse é um de alguns artefatos do dbt gerados, o qual possui informações valiosas do dbt, os quais podem ser utilizados para facilitar automações futuras, como por exemplo [automatizar a execução dos modelos usando o Airflow](https://www.astronomer.io/blog/airflow-dbt-1/). Para mais informações sobre o manifest, [clique aqui](https://docs.getdbt.com/reference/artifacts/manifest-json).
 
 ### dbt compile
 
-Para gerar o `manifest.json` é necessário rodar ao menos um comando `dbt compile`
+Para gerar o `manifest.json` é necessário rodar ao menos um comando `dbt compile`.
 
 ### dbt jinja
 
@@ -70,6 +70,9 @@ Jinja é uma [linguagem de template baseada em Python](https://jinja.palletsproj
 
 Outra funcionalidade do dbt é o snapshot, uma funcionalidade que permite trackear mudanças em um source ou modelo. Segue aqui a documentação desta [funcionalidade](https://docs.getdbt.com/docs/build/snapshots).
 
+## dbt --debug
+
+Uma funcionalidade muito bacana do dbt é o modo debug que ele disponibiliza, por onde conseguimos ver exatamente quais comandos o dbt está executando no banco. Para acessar isso basta
 
 # Hora de praticar!
 
