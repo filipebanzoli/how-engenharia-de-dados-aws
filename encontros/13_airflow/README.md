@@ -44,11 +44,11 @@
     - [Dagster](https://dagster.io/)
     - [Prefect](https://www.prefect.io/)
     - [Mage](https://www.mage.ai/)
-  - Para deploy em produção:
-    - [WMAA](https://aws.amazon.com/pt/managed-workflows-for-apache-airflow/): A versão gerenciada pela AWS do Airflow.
-    - [Astronomer](https://www.astronomer.io/): Versão gerenciada (e ampliada) do Airflow pelos maiores commiters do projeto do Airflow.
-    - [Kubernetes Helm Chart](https://airflow.apache.org/docs/helm-chart/stable/index.html): Forma recomendada de subir o Airflow por conta própria em produção, eu recomendo utilizar essa opção caso sua equipe possua conhecimentos em Kubernetes.
-    - [ECS](https://github.com/andresionek91/airflow-autoscaling-ecs): Um exemplo de arquitetura do Airflow no ECS, mais uma possibilidade. Existe muitas boas práticas nesse projeto, recomendo darem uma olhada.
+- Para deploy em produção:
+  - [WMAA](https://aws.amazon.com/pt/managed-workflows-for-apache-airflow/): A versão gerenciada pela AWS do Airflow.
+  - [Astronomer](https://www.astronomer.io/): Versão gerenciada (e ampliada) do Airflow pelos maiores commiters do projeto do Airflow.
+  - [Kubernetes Helm Chart](https://airflow.apache.org/docs/helm-chart/stable/index.html): Forma recomendada de subir o Airflow por conta própria em produção, eu recomendo utilizar essa opção caso sua equipe possua conhecimentos em Kubernetes.
+  - [ECS](https://github.com/andresionek91/airflow-autoscaling-ecs): Um exemplo de arquitetura do Airflow no ECS, mais uma possibilidade. Existe muitas boas práticas nesse projeto, recomendo darem uma olhada.
 
 Tarefa de casa:
 - Testar localmente o Airflow Local.
