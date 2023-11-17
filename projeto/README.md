@@ -47,7 +47,7 @@ Para destruir os recursos:
 - Incluir streaming de dados via CDC do banco de dados transacional para o AWS S3, usando o DMS (código disponibilizado no diretório [data_ingestion/dms](./geral/data_ingestion/dms)).
 
 ### O que é opcional:
-- Incluir fonte de dados de mercado livre, usando Selenium
+- Incluir fonte de dados de Mercado Livre, usando Selenium.
 - Incluir teste de integração em pelo menos uma das pipelines em Python desenvolvidas.
 
 Com relação ao conteúdo ligado aos outros encontros, nós acabamos desenvolvendo exercícios pontuais ligados a eles, mas se quiserem podem incluir no projeto algum deles, **de forma opcional**.
