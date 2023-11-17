@@ -43,7 +43,7 @@ Para destruir os recursos:
 
 ### O que é obrigatório:
 - Incluir fonte de dados do condor (ou qualquer outro mercado/loja) usando AWS Lambda.
-- Incluir fonte de dados de planilha usando Airbyte Cloud, Google Sheets, AWS. ([source worksheet](./geral/sources/worksheet/))
+- Incluir fonte de dados de planilha usando Airbyte Cloud, Google Sheets, AWS. ([source worksheet](./geral/sources/worksheet/)). PS: No lugar do Airbyte Cloud pode-se utilizar outra tecnologia no code (ou code) para trazer os dados de planilha para o S3, como por exemplo [Stitch](https://www.stitchdata.com/) ou script Python.
 - Incluir streaming de dados via CDC do banco de dados transacional para o AWS S3, usando o DMS (código disponibilizado no diretório [data_ingestion/dms](./geral/data_ingestion/dms)).
 
 ### O que é opcional:
